@@ -27,7 +27,7 @@ python src/match.py --age 62 --sex FEMALE "Type 2 diabetes for 10 years, on metf
 | 4 | `src/evaluate.py` | Runs 10 invented patients and compares results by age and sex. |
 | 4b | `src/evaluate_known_item.py` | Searches with each trial's summary and checks whether the matcher finds that trial. |
 | 4c | `src/review.py` | Scores the top 5 trials per patient from the suitability labels in `results/review.csv`. |
-| 6 | `src/fetch_trec.py`, `src/check_trec.py`, `src/fetch_trec_ages.py`, `src/build_trec_index.py`, `src/evaluate_trec.py` | Runs the same matching method on the TREC 2021 Clinical Trials benchmark and scores it against expert labels. |
+| 5 | `src/fetch_trec.py`, `src/check_trec.py`, `src/fetch_trec_ages.py`, `src/build_trec_index.py`, `src/evaluate_trec.py` | Runs the same matching method on the TREC 2021 Clinical Trials benchmark and scores it against expert labels. |
 
 The age and sex filter is a hard rule: a trial outside the patient's age range or sex is removed. Everything else is a soft ranking by text similarity.
 
@@ -48,7 +48,7 @@ python src/evaluate_known_item.py
 python src/review.py
 ```
 
-The TREC benchmark is separate and optional. It downloads about 138 MB:
+The TREC benchmark is optional. Run it after the steps above, because it reuses the model and filter from `match.py`. It downloads about 138 MB:
 
 ```
 python src/fetch_trec.py
@@ -60,7 +60,7 @@ python src/evaluate_trec.py
 
 ## Data
 
-The results below use a snapshot of **886 trials** fetched on 11 November 2026. The registry changes daily, so a fresh fetch will give slightly different numbers.
+The results below use a snapshot of **886 trials** fetched on 11 November 2026. The registry changes daily, so a fresh fetch will give slightly different numbers. The labels in `results/review.csv` belong to this snapshot: after a fresh fetch, the top 5 trials for a patient may no longer be the ones that were labelled.
 
 - 846 trials accept all sexes, 33 are female-only and 7 are male-only.
 - 385 trials set no maximum age and 16 set no minimum age. These are stored as 120 and 0 so the filter can treat every trial the same way.
@@ -138,7 +138,7 @@ Recall@k is the share of trials found within the top k results.
 - **No clear difference by sex or age group.** Recall@5 is between 83% and 86% for every group. The single-sex groups are small (33 and 7 trials), so their higher recall@1 is not strong evidence.
 - **This is an easier task than patient matching.** A trial's summary shares wording with its own title and criteria. A patient description does not. The test shows the search finds text on the same topic; it does not show the patient is eligible.
 
-Chroma's search is approximate, so these figures can move by a fraction of a percentage point when the index is rebuilt.
+These figures change slightly from run to run, because Chroma's search is approximate. Across repeated runs the overall figures moved by about 0.2 percentage points. In the smaller groups one trial is worth more than a percentage point, so those rows moved by up to 3.
 
 ### 3. Suitability labels
 

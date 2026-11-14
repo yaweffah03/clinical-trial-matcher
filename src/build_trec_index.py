@@ -1,4 +1,4 @@
-"""Step 6d: embed the TREC trials and store them in Chroma.
+"""Step 5d: embed the TREC trials and store them in Chroma.
 
 Run from the project folder, after fetch_trec_ages.py:
     python src/build_trec_index.py

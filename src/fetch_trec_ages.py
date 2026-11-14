@@ -1,4 +1,4 @@
-"""Step 6c: fetch the age limits and sex of every TREC trial.
+"""Step 5c: fetch the age limits and sex of every TREC trial.
 
 Run from the project folder, after fetch_trec.py:
     python src/fetch_trec_ages.py

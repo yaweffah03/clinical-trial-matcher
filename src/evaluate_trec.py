@@ -1,4 +1,4 @@
-"""Step 6e: score the matcher against the TREC 2021 expert labels.
+"""Step 5e: score the matcher against the TREC 2021 expert labels.
 
 Run from the project folder, after build_trec_index.py:
     python src/evaluate_trec.py

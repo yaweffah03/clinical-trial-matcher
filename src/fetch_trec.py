@@ -1,4 +1,4 @@
-"""Step 6a: download the TREC 2021 Clinical Trials benchmark.
+"""Step 5a: download the TREC 2021 Clinical Trials benchmark.
 
 Run from the project folder:
     python src/fetch_trec.py

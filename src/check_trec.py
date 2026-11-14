@@ -1,4 +1,4 @@
-"""Step 6b: three checks on the TREC 2021 data before using it.
+"""Step 5b: three checks on the TREC 2021 data before using it.
 
 Run from the project folder, after fetch_trec.py:
     python src/check_trec.py
