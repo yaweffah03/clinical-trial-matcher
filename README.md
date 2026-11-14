@@ -27,6 +27,7 @@ python src/match.py --age 62 --sex FEMALE "Type 2 diabetes for 10 years, on metf
 | 4 | `src/evaluate.py` | Runs 10 invented patients and compares results by age and sex. |
 | 4b | `src/evaluate_known_item.py` | Searches with each trial's summary and checks whether the matcher finds that trial. |
 | 4c | `src/review.py` | Scores the top 5 trials per patient from the suitability labels in `results/review.csv`. |
+| 6 | `src/fetch_trec.py`, `src/check_trec.py`, `src/fetch_trec_ages.py`, `src/build_trec_index.py`, `src/evaluate_trec.py` | Runs the same matching method on the TREC 2021 Clinical Trials benchmark and scores it against expert labels. |
 
 The age and sex filter is a hard rule: a trial outside the patient's age range or sex is removed. Everything else is a soft ranking by text similarity.
 
@@ -47,6 +48,16 @@ python src/evaluate_known_item.py
 python src/review.py
 ```
 
+The TREC benchmark is separate and optional. It downloads about 138 MB:
+
+```
+python src/fetch_trec.py
+python src/check_trec.py
+python src/fetch_trec_ages.py
+python src/build_trec_index.py
+python src/evaluate_trec.py
+```
+
 ## Data
 
 The results below use a snapshot of **886 trials** fetched on 11 November 2026. The registry changes daily, so a fresh fetch will give slightly different numbers.
@@ -56,11 +67,12 @@ The results below use a snapshot of **886 trials** fetched on 11 November 2026. 
 
 ## Evaluation
 
-There are no expert labels saying which trials are truly right for each patient. The evaluation has three parts, each answering a different question:
+There are no expert labels saying which diabetes trials are truly right for each test patient. The evaluation has four parts, each answering a different question. The first three use the diabetes trials. The fourth runs the same method on a public benchmark that does have expert labels.
 
 1. **Behaviour by age and sex.** How do the results change when only the patient's age or sex changes?
 2. **Known-item test.** Can the text search find a trial when the right answer is known?
 3. **Suitability labels.** Of the top 5 trials for each test patient, how many could the patient plausibly join?
+4. **TREC 2021 benchmark.** How does the same method score against expert labels, on other patients and trials?
 
 ### 1. Behaviour by age and sex
 
@@ -167,23 +179,66 @@ Precision at 5 is the share of top-5 trials labelled suitable.
 - **Most failures are eligibility, not topic.** A typical example: a lifestyle programme ranked second for a newly diagnosed patient who wants lifestyle support, but the trial requires a diagnosis of at least 12 months.
 - **The age filter has a gap.** A trial whose criteria say "adult patients" but whose registry entry sets no age limits passed the filter for the 15-year-old.
 
+### 4. TREC 2021 benchmark
+
+The TREC 2021 Clinical Trials track is a public test set: 75 patient descriptions and 35,832 patient–trial pairs labelled by expert assessors as eligible (2), excluded (1) or not relevant (0). It covers all conditions, not only diabetes.
+
+The same method is used as for the diabetes trials: the same model, the same trial text (title, conditions and eligibility criteria), the same cosine ranking and the same age and sex filter. Three things had to be added:
+
+- **Patient age and sex** are pulled from the free-text description with two patterns (for example "45-year-old man", "32 yo woman", "74M"). This worked for all 75 patients.
+- **Trial age limits and sex** are not in the benchmark's trial file, so they are fetched from the ClinicalTrials.gov API as it is today.
+- **The trials** come from the file prepared by the TrialGPT authors: 26,149 trials, every one of which was judged for at least one patient.
+
+Each patient's top 10 trials are scored three ways:
+
+- **NDCG@10:** ranking quality from 0 to 1, using the labels 2, 1 and 0 as gains. Trials near the top count more.
+- **Eligible:** the share of the top 10 labelled eligible.
+- **Excluded:** the share of the top 10 labelled excluded.
+
+A trial that was not judged for a patient counts as 0.
+
+| Group | Patients | NDCG@10 | Eligible | Excluded |
+|---|---|---|---|---|
+| No filter | 75 | 0.491 | 31% | 31% |
+| Age and sex filter | 75 | 0.516 | 36% | 26% |
+| Female (filtered) | 37 | 0.487 | 35% | 22% |
+| Male (filtered) | 38 | 0.545 | 37% | 31% |
+| Age under 18 (filtered) | 11 | 0.624 | 42% | 32% |
+| Age 18 to 64 (filtered) | 56 | 0.494 | 36% | 23% |
+| Age 65 and over (filtered) | 8 | 0.524 | 27% | 45% |
+
+#### What this shows
+
+- **The age and sex filter helps.** It raises the share of eligible trials in the top 10 from 31% to 36% and lowers the share of excluded trials from 31% to 26%.
+- **Similarity is not eligibility, measured.** Even with the filter, about a quarter of the top 10 are trials on the right topic that experts say the patient is excluded from.
+- **The oldest patients again get the most excluded trials.** For patients aged 65 and over, 45% of the top 10 are excluded and 27% eligible. This matches the suitability labels above, but rests on only 8 patients.
+- **The filter makes some mistakes.** It removed 75 of the 5,569 trials that experts labelled eligible (1.3%). The cause was not investigated. Possible reasons are registry age limits that changed after 2021, or assessors being lenient about age.
+
+#### What this does not show
+
+- **It is not a check of the diabetes results.** Only two of the 75 patients have type 2 diabetes, and for neither is it the main problem. The benchmark tests the method, not the diabetes matches.
+- **It is easier than a real search.** The trial file contains only judged trials. The original TREC task searched a full snapshot of the registry, which is many times larger, so these scores should not be compared directly with scores from that task.
+
 ## Limitations
 
 - **Similarity is not eligibility.** The matcher ranks trials by how similar their text is to the patient summary. A trial that excludes kidney disease can rank highly for a patient with kidney disease, because both texts are about kidney disease. Only age and sex are actually checked.
 - **Most trial text is cut off.** The embedding model reads at most 256 tokens. 509 of the 886 trial texts (57%) are longer, so later criteria, usually the exclusion criteria, are ignored.
-- **No expert labels.** The suitability labels come from an AI assistant and the project author, not from clinicians. The author's labels were recorded in the same file as the AI labels, so the labelling cannot be shown to be blind. Patient summaries are one sentence long, so many criteria could not be checked.
+- **No expert labels for the diabetes trials.** Expert labels are used only in the TREC benchmark, which covers other patients and trials. The suitability labels come from an AI assistant and the project author, not from clinicians. The author's labels were recorded in the same file as the AI labels, so the labelling cannot be shown to be blind. Patient summaries are one sentence long, so many criteria could not be checked.
 - **Small test set.** There are only 10 invented patients and 50 labelled pairs. Group figures rest on as few as 15 pairs. They show tendencies, not statistically tested differences.
 - **Age limits in free text are missed.** The filter uses the registry's age fields. A limit that appears only in the criteria text is not applied.
 - **Broad condition search.** The API search returns any trial that lists type 2 diabetes among its conditions, including trials aimed at prevention or at people at risk.
 - **Simplified age and sex.** Missing age limits are replaced with 0 and 120, and sex is limited to the registry's three values.
 - **General-purpose model.** `all-MiniLM-L6-v2` was not trained on medical text.
 - **One snapshot.** Results reflect the registry on one day.
+- **Simple text patterns for TREC patients.** Age and sex are found with two patterns that fit these 75 descriptions. When a description never says "man" or "woman", sex comes from the first pronoun, which on other data could refer to a relative.
+- **Mixed dates in the TREC run.** Trial text is from the 2021 benchmark, but age limits and sex are from the registry today.
 
 ## How this differs from TrialGPT
 
-TrialGPT uses large language models in three stages: retrieving candidate trials, judging the patient against each eligibility criterion, and ranking trials from those judgements. It was evaluated on expert-annotated patient–trial pairs. This project only does a simple version of the first stage, with a small embedding model and no language model. Its only labels are the 50 non-expert ones described above.
+TrialGPT uses large language models in three stages: retrieving candidate trials, judging the patient against each eligibility criterion, and ranking trials from those judgements. It was evaluated on expert-annotated patient–trial pairs. This project only does a simple version of the first stage, with a small embedding model and no language model. It never judges individual criteria, which is why a quarter of its top results on TREC are trials the patient is excluded from.
 
 ## Credits
 
 - Trial data: [ClinicalTrials.gov](https://clinicaltrials.gov), U.S. National Library of Medicine.
+- Benchmark: [TREC 2021 Clinical Trials track](https://trec.nist.gov/data/trials2021.html), U.S. National Institute of Standards and Technology. The trial file is the one published by the TrialGPT authors.
 - Inspiration: Jin Q, et al. "Matching patients to clinical trials with large language models." *Nature Communications* (2024).

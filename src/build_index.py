@@ -38,6 +38,10 @@ def age_in_years(text, default):
         return number / 52
     if unit.startswith("Day"):
         return number / 365
+    if unit.startswith("Hour"):
+        return number / (365 * 24)
+    if unit.startswith("Minute"):
+        return number / (365 * 24 * 60)
     raise ValueError(f"Unknown age unit in: {text}")
 
 
