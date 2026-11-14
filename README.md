@@ -217,7 +217,7 @@ A trial that was not judged for a patient counts as 0.
 #### What this does not show
 
 - **It is not a check of the diabetes results.** Only two of the 75 patients have type 2 diabetes, and for neither is it the main problem. The benchmark tests the method, not the diabetes matches.
-- **It is easier than a real search.** The trial file contains only judged trials. The original TREC task searched a full snapshot of the registry, which is many times larger, so these scores should not be compared directly with scores from that task.
+- **It is easier than a real search.** The trial file contains only judged trials. The original TREC task searched a snapshot of the whole registry taken on 27 April 2021, containing 375,580 trials, about 14 times as many, so these scores should not be compared directly with scores from that task.
 
 ## Limitations
 
