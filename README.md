@@ -1,2 +1,189 @@
 # clinical-trial-matcher
-Matches a patient summary to recruiting type 2 diabetes trials from ClinicalTrials.gov using sentence embeddings and Chroma. Inspired by NIH’s TrialGPT. Learning project, not a clinical tool.
+
+Matches a patient summary to recruiting type 2 diabetes trials from ClinicalTrials.gov using sentence embeddings and Chroma. Inspired by NIH's TrialGPT. Learning project, not a clinical tool.
+
+> **Not a clinical tool.** This is a learning project. It does not check whether a patient is eligible for a trial and must not be used to make decisions about care.
+
+## What it does
+
+You give it a short patient description, an age and a sex. It returns the 20 recruiting type 2 diabetes trials whose text is most similar to the description, keeping only trials that accept that age and sex.
+
+```
+python src/match.py --age 62 --sex FEMALE "Type 2 diabetes for 10 years, on metformin, early kidney disease"
+
+ 1. 0.674  NCT07760883  Metformin Effects According to SLC16A11 Carrier Status
+ 2. 0.646  NCT05345327  SGLT2 Inhibitors As First Line Therapy to Prevent Renal Decline in Type 2 Diabetes
+ 3. 0.635  NCT07487467  Autologous SVF Therapy for Type 2 Diabetes
+ ...
+```
+
+## How it works
+
+| Step | Script | What it does |
+|---|---|---|
+| 1 | `src/fetch_trials.py` | Downloads recruiting trials with the condition "type 2 diabetes" from the ClinicalTrials.gov v2 API and saves them to `data/trials.json`. |
+| 2 | `src/build_index.py` | Turns each trial's title, conditions and eligibility criteria into an embedding with `all-MiniLM-L6-v2` and stores it in Chroma, with minimum age, maximum age and sex as metadata. |
+| 3 | `src/match.py` | Embeds the patient summary, filters trials by age and sex, and returns the 20 nearest by cosine similarity. |
+| 4 | `src/evaluate.py` | Runs 10 invented patients and compares results by age and sex. |
+| 4b | `src/evaluate_known_item.py` | Searches with each trial's summary and checks whether the matcher finds that trial. |
+| 4c | `src/review.py` | Scores the top 5 trials per patient from the suitability labels in `results/review.csv`. |
+
+The age and sex filter is a hard rule: a trial outside the patient's age range or sex is removed. Everything else is a soft ranking by text similarity.
+
+## How to run it
+
+Tested with Python 3.14, sentence-transformers 6.3.0 and chromadb 1.5.9.
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python src/fetch_trials.py
+python src/build_index.py
+python src/match.py --age 62 --sex FEMALE "Type 2 diabetes for 10 years, on metformin, early kidney disease"
+python src/evaluate.py
+python src/evaluate_known_item.py
+python src/review.py
+```
+
+## Data
+
+The results below use a snapshot of **886 trials** fetched on 11 November 2026. The registry changes daily, so a fresh fetch will give slightly different numbers.
+
+- 846 trials accept all sexes, 33 are female-only and 7 are male-only.
+- 385 trials set no maximum age and 16 set no minimum age. These are stored as 120 and 0 so the filter can treat every trial the same way.
+
+## Evaluation
+
+There are no expert labels saying which trials are truly right for each patient. The evaluation has three parts, each answering a different question:
+
+1. **Behaviour by age and sex.** How do the results change when only the patient's age or sex changes?
+2. **Known-item test.** Can the text search find a trial when the right answer is known?
+3. **Suitability labels.** Of the top 5 trials for each test patient, how many could the patient plausibly join?
+
+### 1. Behaviour by age and sex
+
+This part measures three things that can be computed without labels:
+
+- **Pool:** how many trials pass the age and sex filter.
+- **Similarity:** the average cosine similarity of the top 20 matches.
+- **Overlap:** how many of the top 20 stay the same when exactly one detail changes.
+
+These describe how the matcher behaves. They are not a measure of clinical relevance.
+
+The 10 test patients are invented. Their summaries leave out age and sex, so those two details only affect results through the filter.
+
+#### Each patient, and the effect of flipping only their sex
+
+| Age | Sex | Pool | Similarity | Same top-20 after sex flip |
+|---|---|---|---|---|
+| 15 | Female | 62 | 0.509 | 20/20 |
+| 24 | Male | 652 | 0.625 | 20/20 |
+| 35 | Female | 723 | 0.537 | 11/20 |
+| 45 | Male | 759 | 0.593 | 20/20 |
+| 52 | Female | 779 | 0.683 | 20/20 |
+| 58 | Male | 768 | 0.620 | 19/20 |
+| 63 | Female | 772 | 0.609 | 20/20 |
+| 68 | Male | 671 | 0.582 | 20/20 |
+| 74 | Female | 600 | 0.593 | 20/20 |
+| 86 | Male | 402 | 0.612 | 20/20 |
+
+#### All 10 summaries re-run at fixed ages (averages)
+
+| Age | Pool | Similarity | Same top-20 as at age 50 |
+|---|---|---|---|
+| 30 | 703 | 0.600 | 16.9/20 |
+| 50 | 780 | 0.607 | 20.0/20 |
+| 70 | 668 | 0.602 | 16.2/20 |
+| 85 | 422 | 0.575 | 8.6/20 |
+
+#### What this shows
+
+- **Age changes the results a lot at the extremes.** At 85, the same patients have about half the candidate trials they have at 50, keep fewer than half of the same top 20, and get lower similarity scores. The 15-year-old has only 62 eligible trials and the lowest similarity of all.
+- **Sex rarely changes the results.** For 8 of 10 patients, flipping sex changed nothing, because 95% of trials accept all sexes.
+- **Sex matters when the condition is sex-specific.** The 35-year-old woman with previous gestational diabetes and polycystic ovary syndrome kept only 11 of her top 20 after the flip, because many of her best matches are female-only trials.
+
+### 2. Known-item test
+
+The index is built from each trial's title, conditions and eligibility criteria. The trial's summary is never embedded, so it is unseen text about a known trial. This test uses every summary as a search query, with no age or sex filter, and checks whether the matcher returns the trial the summary came from.
+
+Recall@k is the share of trials found within the top k results.
+
+| Group | Trials | Recall@1 | Recall@5 | Recall@20 |
+|---|---|---|---|---|
+| All trials | 886 | 65.6% | 83.4% | 92.9% |
+| Accepts all sexes | 846 | 65.1% | 83.3% | 92.6% |
+| Female only | 33 | 75.8% | 84.8% | 100.0% |
+| Male only | 7 | 71.4% | 85.7% | 100.0% |
+| Accepts under 18 | 71 | 62.0% | 83.1% | 93.0% |
+| Adults under 65 only | 68 | 73.5% | 83.8% | 97.1% |
+| Accepts 65 and over | 747 | 65.2% | 83.4% | 92.5% |
+
+#### What this shows
+
+- **The text search works.** Out of 886 trials, the right one is the first result about two times in three, and in the top 20 more than nine times in ten.
+- **No clear difference by sex or age group.** Recall@5 is between 83% and 86% for every group. The single-sex groups are small (33 and 7 trials), so their higher recall@1 is not strong evidence.
+- **This is an easier task than patient matching.** A trial's summary shares wording with its own title and criteria. A patient description does not. The test shows the search finds text on the same topic; it does not show the patient is eligible.
+
+Chroma's search is approximate, so these figures can move by a fraction of a percentage point when the index is rebuilt.
+
+### 3. Suitability labels
+
+For each of the 10 test patients, the top 5 trials (50 patient–trial pairs) were labelled 1 (suitable) or 0 (not suitable), using three checks in order:
+
+1. Is the trial about a problem the patient has?
+2. Do the main inclusion criteria fit what the summary says?
+3. Does any exclusion criterion clearly apply?
+
+A condition or past procedure the trial requires counts as absent if the summary does not mention it. Lab values, measurements and demographics that the summary does not mention are not held against the patient.
+
+The pairs were labelled twice:
+
+- **AI labels:** an AI assistant (Claude) read each trial's eligibility criteria and gave a label and a one-line reason.
+- **Human labels:** the project author labelled all 50 from the trial pages on ClinicalTrials.gov.
+
+Neither labeller is a clinician. The labels and reasons are in `results/review.csv`.
+
+**Agreement.** The two sets of labels agreed on 48 of 50 pairs on the first pass. The author rechecked the two disputed pairs against the trial pages and corrected both, so the final labels agree on all 50. In both cases the trial's topic fitted the patient, but one inclusion criterion ruled the patient out.
+
+Precision at 5 is the share of top-5 trials labelled suitable.
+
+| Group | Trials | Suitable |
+|---|---|---|
+| All patients | 50 | 56% |
+| Top trial only | 10 | 50% |
+| Female | 25 | 56% |
+| Male | 25 | 56% |
+| Age under 40 | 15 | 67% |
+| Age 40 to 64 | 20 | 65% |
+| Age 65 and over | 15 | 33% |
+
+#### What this shows
+
+- **About half the top results are suitable.** 28 of 50 top-5 trials, and 5 of 10 first-ranked trials, are ones the patient could plausibly join.
+- **No difference by sex.** Both sexes have 14 of 25 suitable.
+- **The oldest patients do worst.** Patients aged 65 and over have 5 of 15 suitable, against 23 of 35 for younger patients. In this test set the older patients also have the most complications (heart failure, macular edema, cognitive impairment), so age and complications cannot be separated. Trials on those topics often exclude the complication itself.
+- **Most failures are eligibility, not topic.** A typical example: a lifestyle programme ranked second for a newly diagnosed patient who wants lifestyle support, but the trial requires a diagnosis of at least 12 months.
+- **The age filter has a gap.** A trial whose criteria say "adult patients" but whose registry entry sets no age limits passed the filter for the 15-year-old.
+
+## Limitations
+
+- **Similarity is not eligibility.** The matcher ranks trials by how similar their text is to the patient summary. A trial that excludes kidney disease can rank highly for a patient with kidney disease, because both texts are about kidney disease. Only age and sex are actually checked.
+- **Most trial text is cut off.** The embedding model reads at most 256 tokens. 509 of the 886 trial texts (57%) are longer, so later criteria, usually the exclusion criteria, are ignored.
+- **No expert labels.** The suitability labels come from an AI assistant and the project author, not from clinicians. The author's labels were recorded in the same file as the AI labels, so the labelling cannot be shown to be blind. Patient summaries are one sentence long, so many criteria could not be checked.
+- **Small test set.** There are only 10 invented patients and 50 labelled pairs. Group figures rest on as few as 15 pairs. They show tendencies, not statistically tested differences.
+- **Age limits in free text are missed.** The filter uses the registry's age fields. A limit that appears only in the criteria text is not applied.
+- **Broad condition search.** The API search returns any trial that lists type 2 diabetes among its conditions, including trials aimed at prevention or at people at risk.
+- **Simplified age and sex.** Missing age limits are replaced with 0 and 120, and sex is limited to the registry's three values.
+- **General-purpose model.** `all-MiniLM-L6-v2` was not trained on medical text.
+- **One snapshot.** Results reflect the registry on one day.
+
+## How this differs from TrialGPT
+
+TrialGPT uses large language models in three stages: retrieving candidate trials, judging the patient against each eligibility criterion, and ranking trials from those judgements. It was evaluated on expert-annotated patient–trial pairs. This project only does a simple version of the first stage, with a small embedding model and no language model. Its only labels are the 50 non-expert ones described above.
+
+## Credits
+
+- Trial data: [ClinicalTrials.gov](https://clinicaltrials.gov), U.S. National Library of Medicine.
+- Inspiration: Jin Q, et al. "Matching patients to clinical trials with large language models." *Nature Communications* (2024).

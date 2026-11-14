@@ -2,8 +2,12 @@
 .venv/
 __pycache__/
 
-# macOS Finder files
+# macOS Finder files and Excel lock files
 .DS_Store
+~$*
 
 # Downloaded data (recreate it with: python src/fetch_trials.py)
 data/
+
+# Vector database (recreate it with: python src/build_index.py)
+chroma_db/
