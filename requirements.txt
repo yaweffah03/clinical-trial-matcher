@@ -1,3 +1,8 @@
+# Use the CPU-only build of PyTorch (needed by sentence-transformers). The
+# default build on Linux includes several GB of GPU libraries that a free
+# web server cannot use.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 requests
 sentence-transformers
 chromadb
