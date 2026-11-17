@@ -2,7 +2,7 @@
 
 Matches a patient summary to recruiting type 2 diabetes trials from ClinicalTrials.gov using sentence embeddings and Chroma, then checks the top trials' eligibility criteria with a language model (Google Gemini). Inspired by NIH's TrialGPT. Learning project, not a clinical tool.
 
-> **Not a clinical tool.** This is a learning project. Its eligibility check is often wrong, and it must not be used to make decisions about care.
+> **Not a clinical tool.** This is a learning project. Its eligibility check is often wrong, and it must not be used to make care decisions.
 
 ## What it does
 
@@ -60,7 +60,7 @@ python src/build_trec_index.py
 python src/evaluate_trec.py
 ```
 
-The criteria check is also optional. It needs a free Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey), set in the terminal and never written into a file. Tested with google-genai 3.3.0:
+The criteria check is optional. It uses a free Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey), set in the terminal. Tested with google-genai 3.3.0:
 
 ```
 export GEMINI_API_KEY="your key"
@@ -76,11 +76,11 @@ The model's answers used for the results below are saved in `results/criterion_c
 The results below use a snapshot of **886 trials** fetched on 11 November 2026. The registry changes daily, so a fresh fetch will give slightly different numbers. The labels in `results/review.csv` belong to this snapshot: after a fresh fetch, the top 5 trials for a patient may no longer be the ones that were labelled.
 
 - 846 trials accept all sexes, 33 are female-only and 7 are male-only.
-- 385 trials set no maximum age and 16 set no minimum age. These are stored as 120 and 0 so the filter can treat every trial the same way.
+- 385 trials set no maximum age and 16 set no minimum age. These are stored as 120 and 0, so the filter can treat every trial the same way.
 
 ## Evaluation
 
-There are no expert labels saying which diabetes trials are truly right for each test patient. The evaluation has five parts, each answering a different question. The first three use the diabetes trials. The fourth runs the same method on a public benchmark that does have expert labels. The fifth measures the criteria check on both.
+No expert labels are saying which diabetes trials are truly right for each test patient. The evaluation has five parts, each answering a different question. The first three use the diabetes trials. The fourth runs the same method on a public benchmark that does have expert labels. The fifth measures the criteria check on both.
 
 1. **Behaviour by age and sex.** How do the results change when only the patient's age or sex changes?
 2. **Known-item test.** Can the text search find a trial when the right answer is known?
@@ -199,7 +199,7 @@ The TREC 2021 Clinical Trials track is a public test set: 75 patient description
 
 The same method is used as for the diabetes trials: the same model, the same trial text (title, conditions and eligibility criteria), the same cosine ranking and the same age and sex filter. Three things had to be added:
 
-- **Patient age and sex** are pulled from the free-text description with two patterns (for example "45-year-old man", "32 yo woman", "74M"). This worked for all 75 patients.
+- **Patient age and sex** are pulled from the free-text description with two patterns (for example, "45-year-old man", "32 yo woman", "74M"). This worked for all 75 patients.
 - **Trial age limits and sex** are not in the benchmark's trial file, so they are fetched from the ClinicalTrials.gov API as it is today.
 - **The trials** come from the file prepared by the TrialGPT authors: 26,149 trials, every one of which was judged for at least one patient.
 
@@ -242,14 +242,14 @@ The matcher never reads the criteria, which is why a quarter of its TREC top 10 
 The model does not give the verdict. For each trial it answers:
 
 - Is the trial about a condition the patient has?
-- For every inclusion criterion, and for each exclusion criterion the patient has: what is the criterion about, does the description show the patient has it (yes, no or not stated), and which exact words show it?
+- For every inclusion criterion, and for each exclusion criterion, the patient has: what is the criterion about, does the description show the patient has it (yes, no or not stated), and which exact words show it?
 
 Code then decides, with fixed rules:
 
 - An exclusion criterion rules the patient out only if the answer is yes.
 - An inclusion criterion rules the patient out only if the answer is no.
 - Anything the description does not mention never rules anyone out.
-- A yes or no only counts if its quoted evidence really appears in the patient description. Otherwise it is treated as not stated.
+- A yes or no only counts if its quoted evidence really appears in the patient description. Otherwise, it is treated as not stated.
 
 Splitting the work this way makes every verdict traceable to one criterion and one quote, and lets the rules change without asking the model again.
 
