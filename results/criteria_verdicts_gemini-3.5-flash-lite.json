@@ -1,0 +1,1659 @@
+{
+ "demo|Age 62, female. Type 2 diabetes for 10 years, on metformin, early kidney disease|NCT07760883": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Estimated glomerular filtration rate (eGFR) >60 mL/min"
+  ],
+  "reason": "The patient is excluded because she has early kidney disease and her eGFR is not >60 mL/min."
+ },
+ "demo|Age 62, female. Type 2 diabetes for 10 years, on metformin, early kidney disease|NCT05345327": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and no exclusion criteria apply based on the provided text."
+ },
+ "demo|Age 62, female. Type 2 diabetes for 10 years, on metformin, early kidney disease|NCT07487467": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Diagnosis of Type 2 Diabetes Mellitus for less than 10 years"
+  ],
+  "reason": "The patient has had type 2 diabetes for 10 years, which fails the inclusion criterion of having the diagnosis for less than 10 years."
+ },
+ "demo|Age 62, female. Type 2 diabetes for 10 years, on metformin, early kidney disease|NCT07244003": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria and has no stated exclusion criteria that apply."
+ },
+ "demo|Age 62, female. Type 2 diabetes for 10 years, on metformin, early kidney disease|NCT06972732": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and has no conditions that trigger any exclusion criteria."
+ },
+ "diabetes|1|NCT04024631": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "prior diagnosis of type 1, type 2, or secondary diabetes",
+   "use of medications that would impact glucose and insulin response such as steroids, metformin or other anti-diabetic medication"
+  ],
+  "reason": "The patient is excluded because she has a prior diagnosis of type 2 diabetes and currently takes metformin, both of which violate the trial's exclusion criteria."
+ },
+ "diabetes|1|NCT06730113": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient is a 15-year-old female with youth-onset type 2 diabetes and obesity, meeting all the required inclusion criteria for the Y-T2DM group without meeting any exclusion criteria."
+ },
+ "diabetes|1|NCT06902077": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Negative pancreatic autoantibodies"
+  ],
+  "reason": "The patient does not have documented negative pancreatic autoantibodies as required by the trial's inclusion criteria."
+ },
+ "diabetes|1|NCT05598203": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Adult patients with a previous diagnosis of type 2 diabetes mellitus"
+  ],
+  "reason": "The patient is 15 years old and therefore does not meet the adult inclusion criterion."
+ },
+ "diabetes|1|NCT06120881": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Taking regular metformin (not extended-release formula)"
+  ],
+  "reason": "The patient is on metformin, but the specific formulation (regular versus extended-release) is not stated, and the trial specifically requires taking regular metformin."
+ },
+ "diabetes|2|NCT07017127": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has type 2 diabetes and obesity, meets all stated inclusion criteria, and has no applicable exclusion criteria."
+ },
+ "diabetes|2|NCT07847294": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Diagnosed with Type 2 Diabetes Mellitus for at least 12 months"
+  ],
+  "reason": "The patient is newly diagnosed with type 2 diabetes and does not meet the requirement of having been diagnosed for at least 12 months."
+ },
+ "diabetes|2|NCT05491005": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all stated inclusion criteria for type 2 diabetes and obesity, with no missing information violating any exclusion criteria."
+ },
+ "diabetes|2|NCT05279729": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Monitors blood glucose regularly",
+   "Does not check blood glucose at least once per day"
+  ],
+  "reason": "The patient does not monitor their blood glucose, failing the inclusion criterion and meeting the exclusion criterion regarding blood glucose monitoring."
+ },
+ "diabetes|2|NCT07285330": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients on insulin therapy"
+  ],
+  "reason": "The patient is not on insulin therapy, which is required for inclusion."
+ },
+ "diabetes|3|NCT07449039": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Pre-gestational diabetes (T1DM or T2DM)",
+   "Metformin use"
+  ],
+  "reason": "The patient has type 2 diabetes and uses metformin, both of which are explicit exclusion criteria for this trial."
+ },
+ "diabetes|3|NCT07487467": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the stated inclusion criteria, and none of the exclusion criteria apply."
+ },
+ "diabetes|3|NCT07760883": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and has no conditions matching the exclusion criteria."
+ },
+ "diabetes|3|NCT07351786": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Gestational Diabetes"
+  ],
+  "reason": "The patient is excluded because the trial explicitly lists Gestational Diabetes as an exclusion criterion."
+ },
+ "diabetes|3|NCT07244003": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria and has no recorded conditions that would trigger any exclusion criteria."
+ },
+ "diabetes|4|NCT06989723": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients with inadequately controlled type 2 diabetes mellitus, defined as HbA1c between 7% and 10%, who are currently treated with either: \n\n   * Combination therapy of metformin and a sulfonylurea, or\n   * Combination therapy of metformin and a DPP-4 inhibitor, or\n   * Metformin monotherapy, or\n   * Triple therapy (including metformin) provided that sulfonylurea will be discontinued upon study enrollment."
+  ],
+  "reason": "The patient is on metformin and a statin, which does not fit any of the permitted background anti-diabetic medication regimens specified in inclusion criterion 2."
+ },
+ "diabetes|4|NCT06211556": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria and has no stated exclusion criteria that apply."
+ },
+ "diabetes|4|NCT06449833": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has type 2 diabetes and non-alcoholic fatty liver disease and is treated with metformin, and no exclusion criteria apply or have unstated missing lab values that would rule them out."
+ },
+ "diabetes|4|NCT07083336": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and has no conditions that match any exclusion criteria."
+ },
+ "diabetes|4|NCT05369065": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "3. Diagnosed hypertension with baseline:\n\n   1. Office blood pressure of SBP of \u2265 140 mmHg and \u2264 180 mmHg and DBP \u2265 90 mmHg\n   2. Mean 24-hour ambulatory SBP of \u2265 130 mmHg and \u2264 170 mmHg with \u2265 75% valid readings\n   3. On stable oral anti-hypertension drug regimen consisting of up to a maximum of three drugs"
+  ],
+  "reason": "The patient does not have a diagnosed hypertension or take anti-hypertension medications, which fails the mandatory inclusion criteria for hypertension."
+ },
+ "diabetes|5|NCT07244003": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria and has no recorded exclusion criteria for this trial."
+ },
+ "diabetes|5|NCT06863532": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Have initiated treatment with any one of the SGLT2i monotherapy (dapagliflozin 10mg/d, canagliflozin 100mg/d, empagliflozin 10mg/d, ertugliflozin 5mg/day, or henagliflozin 10mg/day) for at least 8 weeks.",
+   "Have received 500-1000mg/day metformin treatment for at least 8 weeks with a stable, unchanged dose maintained during the screening period."
+  ],
+  "reason": "The patient does not take an SGLT-2 inhibitor as required by the trial, and takes a sulfonylurea instead of meeting the specific background medication criteria."
+ },
+ "diabetes|5|NCT07487467": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Diagnosis of Type 2 Diabetes Mellitus for less than 10 years"
+  ],
+  "reason": "The patient is excluded because the duration of her diabetes is not stated to be less than 10 years."
+ },
+ "diabetes|5|NCT07760883": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Glycated hemoglobin (HbA1c) \u22648%"
+  ],
+  "reason": "The patient is excluded because her HbA1c is 9.5 percent, which exceeds the maximum allowed threshold of 8 percent."
+ },
+ "diabetes|5|NCT07653477": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and has no recorded contraindications or exclusion criteria that apply."
+ },
+ "diabetes|6|NCT06544876": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Foot ulcer",
+   "Painful neuropathy"
+  ],
+  "reason": "The patient is excluded because they have a previous foot ulcer and painful neuropathy, both of which are listed as exclusion criteria."
+ },
+ "diabetes|6|NCT07877948": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the stated inclusion criteria for type 2 diabetes with a foot ulcer and neuropathy, and no missing laboratory values or unstated facts can be held against him."
+ },
+ "diabetes|6|NCT07078565": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients with ulceration/infection of feet, medical/surgical conditions"
+  ],
+  "reason": "The patient is excluded because they have a history of a previous foot ulcer, which violates the exclusion criterion regarding foot ulceration."
+ },
+ "diabetes|6|NCT05577390": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Open wounds"
+  ],
+  "reason": "The patient has a previous foot ulcer, but the description mentions a current foot ulcer status that falls under the exclusion criterion of open wounds."
+ },
+ "diabetes|6|NCT04687215": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "9. Ulcer of the lower extremities"
+  ],
+  "reason": "The patient is excluded because the clinical trial specifically excludes patients with an ulcer of the lower extremities, and the patient description mentions a previous foot ulcer."
+ },
+ "diabetes|7|NCT07760883": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Estimated glomerular filtration rate (eGFR) >60 mL/min"
+  ],
+  "reason": "The patient has early chronic kidney disease, which means her eGFR is likely below 60 mL/min, violating the inclusion criterion."
+ },
+ "diabetes|7|NCT05369065": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the key inclusion criteria including age, type 2 diabetes duration, and medication, with no applicable exclusion criteria based on the provided history."
+ },
+ "diabetes|7|NCT05345327": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial requires patients to be drug na\u00efve or managed with metformin monotherapy, but the patient also has early chronic kidney disease and high blood pressure, and the trial focuses on preventing renal decline where the patient already has chronic kidney disease not matching the primary prevention goal."
+ },
+ "diabetes|7|NCT06688461": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Diagnosed as T2DM patients for at least 1 year and not longer than 5 years"
+  ],
+  "reason": "The patient has had type 2 diabetes for 10 years, which exceeds the maximum duration of 5 years allowed by the inclusion criteria."
+ },
+ "diabetes|7|NCT07300293": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Having experienced lactic acidosis (pH <7.35 and lactate level \u22655 mmol/L) within the first 24 hours of hospitalization."
+  ],
+  "reason": "The patient does not have lactic acidosis within the first 24 hours of hospitalization as required by the inclusion criteria."
+ },
+ "diabetes|8|NCT03132129": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Major atherosclerotic disease: Symptomatic CAD, history of myocardial infarction, previous revascularisation, stroke/transient ischaemic attack or symptomatic peripheral vascular disease.",
+   "History of heart failure or cardiomyopathy."
+  ],
+  "reason": "The patient is excluded because they have a history of myocardial infarction and heart failure, both of which are listed as exclusion criteria."
+ },
+ "diabetes|8|NCT06613854": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Baseline treatment with metformin at a steady daily dose of \u22651500 mg;",
+   "Known cardiovascular disease (angina pectoris, history of myocardial infarction, ischemic heart disease, heart failure, known carotid atherosclerosis, objectively proven peripheral arterial disease, or other known atherosclerotic disease at other locations);"
+  ],
+  "reason": "The patient is excluded because they have a history of myocardial infarction and heart failure, and they are not on baseline metformin treatment."
+ },
+ "diabetes|8|NCT05801614": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "myocardial infarction within the previous 6 months"
+  ],
+  "reason": "The patient is excluded because the trial does not allow patients with a myocardial infarction within the previous 6 months, and the patient had a previous heart attack."
+ },
+ "diabetes|8|NCT07532863": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "With pre-existing atherosclerotic CVD including coronary heart disease, stroke, transient ischemic attack, or peripheral artery disease"
+  ],
+  "reason": "The patient is excluded because they have a history of a previous heart attack, which falls under pre-existing atherosclerotic CVD."
+ },
+ "diabetes|8|NCT07487467": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Use of insulin therapy"
+  ],
+  "reason": "The patient is excluded because he is currently on basal insulin therapy, which violates the trial's exclusion criterion."
+ },
+ "diabetes|9|NCT06713720": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Presence of diabetic macular edema (macular thickness > 250 \\u03bcm)."
+  ],
+  "reason": "The patient is excluded because she has diabetic macular edema, which is explicitly listed as an exclusion criterion."
+ },
+ "diabetes|9|NCT06662994": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Have a previous history of vitrectomy surgery."
+  ],
+  "reason": "The patient is excluded because the clinical trial requires a history of previous vitrectomy surgery, which is not mentioned in the patient's description."
+ },
+ "diabetes|9|NCT06914778": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria including age and diagnosis of type 2 diabetes, and none of the exclusion criteria apply."
+ },
+ "diabetes|9|NCT07351786": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Using Diabetes medications (metformin, sulfonylureas, SGLT2 inhibitors, DPP-4 inhibitors) for a period of 2-3 years"
+  ],
+  "reason": "The patient is treated with insulin rather than the specific diabetes medications required by the inclusion criteria."
+ },
+ "diabetes|9|NCT07662109": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Currently receiving or anticipated to receive, therapeutic intervention for diabetic retinopathy and/or macular edema"
+  ],
+  "reason": "The patient is excluded because she has diabetic retinopathy and macular edema which are treated, meeting the exclusion criterion for receiving therapeutic intervention for these conditions."
+ },
+ "diabetes|10|NCT06469437": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients under follow-up in a specialized endocrinology outpatient clinic"
+  ],
+  "reason": "The patient is excluded because the clinical description does not state that they are under follow-up in a specialized endocrinology outpatient clinic."
+ },
+ "diabetes|10|NCT07285330": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Dependent individuals for activities of daily living (ADL) with a Barthel index score below 60 or with cognitive impairment."
+  ],
+  "reason": "The patient is excluded because they have mild cognitive impairment, which matches the exclusion criterion regarding cognitive impairment."
+ },
+ "diabetes|10|NCT05598203": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Cognitive, neurological or psychiatric condition"
+  ],
+  "reason": "The patient is excluded because they have mild cognitive impairment, which meets the exclusion criterion for a cognitive, neurological or psychiatric condition."
+ },
+ "diabetes|10|NCT06296485": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Dementia"
+  ],
+  "reason": "The patient is excluded because the trial criteria explicitly exclude patients with dementia, and the patient has mild cognitive impairment that falls under this category."
+ },
+ "diabetes|10|NCT06650969": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "History or presence of neurological or psychiatric disorders"
+  ],
+  "reason": "The patient has mild cognitive impairment, which is a neurological disorder that triggers the exclusion criterion."
+ },
+ "trec|1|NCT00004259": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No spinal cord tumors, spinal drop metastases, or metastases to noncontiguous meninges",
+   "No prior chemotherapy",
+   "No prior radiotherapy to brain or head and neck"
+  ],
+  "reason": "The patient is excluded because they have a spinal cord tumor, and have received prior chemotherapy and radiotherapy."
+ },
+ "trec|1|NCT01347307": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The patient has an anaplastic astrocytoma of the spine, which is not among the target conditions for this trial."
+ },
+ "trec|1|NCT00473408": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No prior chemotherapy for high-grade astrocytoma"
+  ],
+  "reason": "The patient is excluded because they have received prior chemotherapy (temozolomide and CPT-11) for their high-grade astrocytoma."
+ },
+ "trec|1|NCT00761280": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "The tumor is localized supratentorially (central MRI review).",
+   "The patient has not received more than one chemotherapy regimen. Radiation with concomitant chemotherapy, followed by adjuvant chemotherapy, is considered as one chemotherapy regimen."
+  ],
+  "reason": "The patient is excluded because his tumor is located in the spine rather than supratentorially, and he has received multiple chemotherapy regimens (temozolomide, CPT-11, and Avastin) exceeding the allowed limit."
+ },
+ "trec|1|NCT00783393": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subjects previously treated with temozolomide."
+  ],
+  "reason": "The patient has been previously treated with temozolomide, which directly meets an exclusion criterion for this trial."
+ },
+ "trec|1|NCT03529708": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for patients with metastatic malignancy, whereas the patient has an anaplastic astrocytoma of the spine, which is a primary central nervous system tumor."
+ },
+ "trec|1|NCT00301418": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a documented histologic diagnosis of anaplastic astrocytoma, meets all inclusion criteria based on the provided history, and no exclusion criteria apply."
+ },
+ "trec|1|NCT01466686": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "The most recent brain tumor pathology obtained for the patient must be glioblastoma."
+  ],
+  "reason": "The patient's tumor is anaplastic astrocytoma rather than glioblastoma, which is required by the inclusion criteria."
+ },
+ "trec|1|NCT00003471": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for low-grade astrocytoma, whereas the patient has an anaplastic astrocytoma, which is high-grade."
+ },
+ "trec|1|NCT00004868": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial requires a supratentorial malignant primary glioma, whereas the patient has a spinal cord (infratentorial/spinal) anaplastic astrocytoma."
+ },
+ "trec|1|NCT00003775": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Chemotherapy: See Disease Characteristics At least 4 weeks since prior chemotherapy (2 weeks since vincristine; 6 weeks since nitrosoureas or mitomycin) and recovered No prior leflunomide (SU101) therapy No other concurrent chemotherapy"
+  ],
+  "reason": "The patient received multiple prior systemic chemotherapy regimens (temozolomide, CPT-11, and Avastin) which exceeds the limit of no more than 1 prior systemic cytotoxic chemotherapy regimen."
+ },
+ "trec|1|NCT00968240": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and has no applicable exclusion criteria for this trial on anaplastic astrocytoma."
+ },
+ "trec|1|NCT00003176": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No prior nitrosourea or temozolomide"
+  ],
+  "reason": "The patient has previously received 11 cycles of temozolomide, which directly violates the exclusion criterion prohibiting prior temozolomide therapy."
+ },
+ "trec|1|NCT00002569": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for anaplastic oligodendroglioma of the brain and central nervous system, whereas the patient has an anaplastic astrocytoma of the spine."
+ },
+ "trec|1|NCT00002620": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for brain cancer, whereas the patient has an anaplastic astrocytoma of the spine."
+ },
+ "trec|1|NCT00047281": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial requires an intracranial malignant glioma, whereas the patient has anaplastic astrocytoma of the spine."
+ },
+ "trec|1|NCT00003470": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the eligibility criteria for the anaplastic astrocytoma clinical trial."
+ },
+ "trec|1|NCT00003621": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Histologically confirmed, newly diagnosed, anaplastic astrocytoma",
+   "At least 5 years since prior chemotherapy",
+   "At least 5 years since prior radiotherapy"
+  ],
+  "reason": "The patient has previously treated recurrent anaplastic astrocytoma with recent chemotherapy and radiotherapy, failing the newly diagnosed and 5-year washout criteria."
+ },
+ "trec|1|NCT03022578": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for recurrent glioblastoma or anaplastic astrocytoma of the brain (supratentorial), whereas the patient has anaplastic astrocytoma of the spine."
+ },
+ "trec|1|NCT00352313": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial requires patients to have an intracranial malignant glioma, whereas the patient has an anaplastic astrocytoma of the spine."
+ },
+ "trec|2|NCT03094143": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No symptoms attributable to aortic stenosis that require aortic valve replacement"
+  ],
+  "reason": "The patient is symptomatic with progressive shortness of breath and lower extremity edema attributable to severe aortic stenosis, which violates the inclusion criterion requiring asymptomatic patients."
+ },
+ "trec|2|NCT01050361": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Age \u2265 65 years"
+  ],
+  "reason": "The patient is excluded because he is 48 years old, which does not meet the minimum age requirement of 65 years."
+ },
+ "trec|2|NCT02679261": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Valve dysfunction only moderate: in case of aortic stenosis with average gradient < 30 mmHg and in case of aortic regurgitation a vena contracta < 7 mm or a jet with < 10 mm.",
+   "Patients who receive statins treatment or other lipid lowering drug or if they have indication to be treated according to the current clinical practice guidelines."
+  ],
+  "reason": "The patient has severe aortic stenosis rather than moderate dysfunction, and a history of hyperlipidemia giving an indication for statin therapy."
+ },
+ "trec|2|NCT02719912": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for mitral valve regurgitation and the patient has aortic stenosis."
+ },
+ "trec|2|NCT01275339": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "EF \u2265 50%",
+   "None or minimal symptoms related to aortic stenosis (NYHA \u2264 2)"
+  ],
+  "reason": "The patient is excluded because his ejection fraction is 25% (failing the EF >= 50% criterion) and he presented with progressive shortness of breath and LE edema indicating severe symptoms (failing the NYHA <= 2 criterion)."
+ },
+ "trec|2|NCT02071849": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "The subject has mixed stenosis and regurgitation of the aortic valve with predominant stenosis",
+   "Low Ejection Fraction (EF) < 35%"
+  ],
+  "reason": "The patient is excluded because they have mixed stenosis and regurgitation with predominant stenosis and a low ejection fraction of 25%."
+ },
+ "trec|2|NCT04339192": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is about tricuspid regurgitation, but the patient presents with severe aortic stenosis and only mild MR and does not have tricuspid regurgitation."
+ },
+ "trec|2|NCT00256165": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patient has significant abnormality in wall motion"
+  ],
+  "reason": "The patient is excluded because his echocardiogram revealed severe global hypokinesis, which meets the exclusion criterion for significant abnormality in wall motion."
+ },
+ "trec|2|NCT03389542": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for degenerative mitral regurgitation, whereas the patient has severe aortic stenosis and bicuspid aortic valve."
+ },
+ "trec|2|NCT01732835": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subject has tri-leaflet aortic valve morphology",
+   "The subject's aortic valve morphology is not tri-leaflet",
+   "The subject has mixed stenosis and regurgitation of the aortic valve with predominant stenosis",
+   "Low Ejection Fraction (EF) EF < 35%"
+  ],
+  "reason": "The patient is excluded because he has a bicuspid aortic valve rather than a tri-leaflet valve, has mixed stenosis and regurgitation with predominant stenosis, and has an ejection fraction of 25% which is below the 35% threshold."
+ },
+ "trec|2|NCT04242225": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Aortic valve is a congenital unicuspid or congenital bicuspid valve, or is noncalcified."
+  ],
+  "reason": "The patient is excluded because he has an underlying bicuspid aortic valve, which directly violates the exclusion criterion."
+ },
+ "trec|2|NCT00413998": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial targets patients with mitral regurgitation and coronary artery disease undergoing CABG, whereas the patient has severe aortic stenosis and bicuspid aortic valve without these trial conditions."
+ },
+ "trec|2|NCT03813524": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for Mitral Regurgitation, whereas the patient's primary pathology is severe aortic stenosis with mild mitral regurgitation."
+ },
+ "trec|2|NCT03549052": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is specifically for mitral valve disease, whereas the patient has aortic stenosis and requires aortic valve replacement."
+ },
+ "trec|2|NCT04634240": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Coronary artery disease defined as: (at least 1 coronary artery lesion of \u226570% visual angiographic diameter stenosis in a native segment that is at least 2.5 mm in diameter that is not a CTO and is amenable to treatment with percutaneous coronary intervention (PCI))"
+  ],
+  "reason": "The patient does not meet the coronary artery disease inclusion criterion because his cardiac catheterization showed no angiographically apparent flow-limiting coronary artery disease."
+ },
+ "trec|2|NCT03805711": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has severe aortic stenosis with symptoms (progressive shortness of breath and lower extremity edema) and meets the general criteria, with no exclusion criteria explicitly met based on the provided text."
+ },
+ "trec|2|NCT00618293": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for patients undergoing valve replacement who experience severe bleeding, which does not match the patient's current presentation."
+ },
+ "trec|2|NCT02672553": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "congenital true bicuspid / unicuspid aortic valve"
+  ],
+  "reason": "The patient is excluded because he has a congenital bicuspid aortic valve, which explicitly violates an exclusion criterion."
+ },
+ "trec|2|NCT04009434": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "LVEF \u2264 25%"
+  ],
+  "reason": "The patient is excluded because his left ventricular ejection fraction (EF) is 25%, which meets the exclusion criterion of LVEF \u2264 25%."
+ },
+ "trec|2|NCT04310046": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "At least one coronary artery lesion with 40-90% diameter stenosis and iwFR (or a comparable resting index) \u22640.89 or with >90% diameter stenosis on coronary angiogram (by visual estimation) in a coronary artery \u22652.5 mm in diameter and Thrombolysis in Myocardial Infarction (TIMI) flow grade III, deemed amenable to PCI within 45 days before or after TAVI."
+  ],
+  "reason": "The patient does not have concomitant coronary artery disease meeting the stenosis criteria, as his cardiac catheterization showed no angiographically apparent flow-limiting coronary artery disease."
+ },
+ "trec|3|NCT03691870": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a ruptured brain AVM, is in a stable clinical condition following resolution of the acute phase, and has no documented absolute contraindications to endovascular treatment or anesthesia."
+ },
+ "trec|3|NCT01803685": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has been diagnosed with intracranial AVM by DSA and meets all inclusion criteria without meeting any exclusion criteria."
+ },
+ "trec|3|NCT02378883": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a confirmed diagnosis of a brain AVM and meets all stated inclusion criteria without violating any exclusion criteria."
+ },
+ "trec|3|NCT03341039": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a cerebral arteriovenous malformation (cAVM) and meets all inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|3|NCT03031873": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Undergoing cerebral catheter angiography for clinical evaluation of the brain AVM. Patients with brain AVMs scheduled for catheter cerebral angiography will undergo MRI (GE 3T) within 3 months."
+  ],
+  "reason": "The patient already underwent cerebral catheter angiography during her hospital admission and is not currently scheduled for another one for clinical evaluation."
+ },
+ "trec|3|NCT02361411": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "\u2460cerebral hemorrhage caused by traumatic, cerebral infarction, tumor and arteriovenous malformation."
+  ],
+  "reason": "The patient's cerebral hemorrhage was caused by an arteriovenous malformation (AVM), which directly meets the exclusion criterion."
+ },
+ "trec|3|NCT01649700": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subject's modified Rankin scale (mRS) grades IV \n \n V."
+  ],
+  "reason": "The patient does not meet the modified Rankin scale grade IV-V requirement as she is ambulating independently and was discharged home without significant disability."
+ },
+ "trec|3|NCT02054117": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Hemorrhage related to trauma, aneurysm, arteriovenous malformation or other vascular malformation"
+  ],
+  "reason": "The patient's hemorrhage was found to be consistent with an arteriovenous malformation, which is an explicit exclusion criterion."
+ },
+ "trec|3|NCT04593966": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   " Patients had underwent interventions in our institution."
+  ],
+  "reason": "The patient was discharged home and did not undergo any interventions for her AVM at the trial's institution."
+ },
+ "trec|3|NCT04494295": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subject with a CT Angiography demonstrating no vascular malformation",
+   "Subject has an underlying vascular lesion defined as causative source of ICH"
+  ],
+  "reason": "The patient's cerebral angiogram showed an arteriovenous malformation (AVM), violating the inclusion criterion requiring no vascular malformation and the exclusion criterion for underlying vascular lesions."
+ },
+ "trec|3|NCT04572568": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a brain arteriovenous malformation confirmed by cerebral angiogram (DSA) and meets all inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|3|NCT01573169": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "cerebral hemorrhage due to intracranial vascular malformation"
+  ],
+  "reason": "The patient is excluded because her cerebral hemorrhage was caused by an intracranial vascular malformation (AVM)."
+ },
+ "trec|3|NCT03354026": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Tests have confirmed that cerebral hemorrhage caused by brain tumor, blood diseases, cerebrovascular malformation (anomaly) or aneurysm, etc"
+  ],
+  "reason": "The patient's cerebral hemorrhage was confirmed by cerebral angiogram to be caused by an arteriovenous malformation (AVM), which directly meets the trial's exclusion criterion."
+ },
+ "trec|3|NCT01758614": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is about carotid and middle cerebral artery occlusion and stroke, whereas the patient presents with an arteriovenous malformation causing intraventricular hemorrhage."
+ },
+ "trec|3|NCT04037267": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "3. Detected cerebrovascular diseases in CTA/MRA/MRV/DSA examinations (choose 1 or 2 examinations);"
+  ],
+  "reason": "The patient's cerebral angiogram detected an arteriovenous malformation (AVM), which meets the exclusion criterion for detected cerebrovascular diseases in DSA examinations."
+ },
+ "trec|3|NCT04136860": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "The SM grade was IV and V."
+  ],
+  "reason": "The patient has a cerebral arteriovenous malformation confirmed by angiogram, but the Spetzler-Martin grade is not stated as IV or V."
+ },
+ "trec|3|NCT02811614": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Intracerebral hemorrhage caused by tumor, coagulopathy, aneurysm, or arteriovenous malformation",
+   "Concurrent head injury or history of head injury"
+  ],
+  "reason": "The patient's hemorrhage was caused by an arteriovenous malformation and she had a history of head injury, both of which are explicit exclusion criteria."
+ },
+ "trec|3|NCT03359252": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "patients with past history that may associated with headache, including subarachnoid hemorrhage, head trauma, intracerebral hemorrhage, trigeminal neuralgia, arteriovenous malformation, brain tumor)"
+  ],
+  "reason": "The patient has a history of an arteriovenous malformation and head trauma which explicitly meet the exclusion criteria."
+ },
+ "trec|3|NCT02879071": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient is an adult over 18 with a diagnosed brain arteriovenous malformation and meets all inclusion criteria with no exclusion criteria."
+ },
+ "trec|3|NCT00029315": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Arteriovenous malformation suspected"
+  ],
+  "reason": "The patient is excluded because her cerebral angiogram showed findings consistent with an arteriovenous malformation (AVM)."
+ },
+ "trec|4|NCT00944567": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The patient has primary cardiac lymphoma, whereas the trial specifically requires primary mediastinal diffuse large B-cell lymphoma with a dominant mass within the anterior mediastinum."
+ },
+ "trec|4|NCT00689845": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is specifically for primary mediastinal diffuse large B-cell lymphoma, whereas the patient has primary cardiac Burkitt's lymphoma."
+ },
+ "trec|4|NCT00369707": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The patient has Burkitt's lymphoma, whereas the trial is specifically for low-grade non-Hodgkin's lymphoma."
+ },
+ "trec|4|NCT00544219": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Histologically confirmed diagnosis of CD20+ diffuse large B-cell lymphoma (DLBCL)"
+  ],
+  "reason": "The patient has a confirmed diagnosis of Burkitt's lymphoma rather than diffuse large B-cell lymphoma (DLBCL)."
+ },
+ "trec|4|NCT00126191": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has histologically documented Burkitt's lymphoma and meets all stated inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|4|NCT04186520": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Must have received Rituximab or another cluster of differentiation 20 (CD20) antibody and at minimum two different chemotherapy regimens appropriate for their disease and be ineligible to receive autologous transplant."
+  ],
+  "reason": "The patient is newly diagnosed with primary cardiac Burkitt's lymphoma and has not received the required prior treatments of Rituximab and at least two different chemotherapy regimens."
+ },
+ "trec|4|NCT00577798": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Planning to receive doxorubicin hydrochloride-based chemotherapy solely at the University of Nebraska Medical Center"
+  ],
+  "reason": "The patient is not planned to receive doxorubicin hydrochloride-based chemotherapy solely at the University of Nebraska Medical Center."
+ },
+ "trec|4|NCT00971763": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Histologically confirmed CD20-positive diffuse large B-cell non-Hodgkin lymphoma (DLBCL) according to the current WHO classification, including all morphological variants"
+  ],
+  "reason": "The patient has Burkitt's lymphoma rather than diffuse large B-cell lymphoma (DLBCL) required by the trial."
+ },
+ "trec|4|NCT01334502": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for diffuse large B-cell lymphoma, whereas the patient has Burkitt's lymphoma."
+ },
+ "trec|4|NCT00133991": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a newly diagnosed Burkitt's lymphoma and meets all stated inclusion and exclusion criteria."
+ },
+ "trec|4|NCT01092182": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has untreated Burkitt's lymphoma and meets all inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|4|NCT00001878": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is about Hypertrophic Cardiomyopathy and Left Ventricular Hypertrophy, whereas the patient has primary cardiac Burkitt's lymphoma."
+ },
+ "trec|4|NCT01446900": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for chronic lymphocytic leukaemia and small lymphocytic lymphoma, whereas the patient has primary cardiac Burkitt's lymphoma."
+ },
+ "trec|4|NCT00609869": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The patient has Burkitt's lymphoma, whereas the trial is specifically for chronic lymphocytic leukemia or mantle cell lymphoma."
+ },
+ "trec|4|NCT02590809": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for hypertrophic cardiomyopathy, whereas the patient has primary cardiac Burkitt's lymphoma."
+ },
+ "trec|4|NCT00290498": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Burkitt's lymphomas, and Mantle cell lymphoma, transformed follicular center cell lymphoma, follicular grade III."
+  ],
+  "reason": "The patient is diagnosed with primary cardiac Burkitt's lymphoma, which is explicitly listed as an exclusion criterion."
+ },
+ "trec|4|NCT00440583": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is specifically for diffuse large B-cell lymphoma, whereas the patient has Burkitt's lymphoma."
+ },
+ "trec|4|NCT00949741": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients with clinical or strumental evidence of meningeal localization disease."
+  ],
+  "reason": "The patient is excluded because the trial requires patients with cerebrospinal fluid analysis at diagnosis and the patient had a negative lumbar puncture indicating potential evaluation for meningeal involvement, or alternatively the trial excludes patients with evidence of meningeal localization, but the patient's condition as Burkitt's lymphoma matches the inclusion criteria though the trial specifically focuses on cerebrospinal fluid analysis which was performed via lumbar puncture."
+ },
+ "trec|4|NCT00455286": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for primary central nervous system lymphoma, whereas the patient has primary cardiac lymphoma."
+ },
+ "trec|4|NCT00020943": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The patient has Burkitt's lymphoma, whereas the trial specifically requires mantle cell lymphoma."
+ },
+ "trec|5|NCT03516929": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients who underwent previous cardiac operation before."
+  ],
+  "reason": "The patient is excluded because they have a history of a prior CABG, which violates the exclusion criterion for previous cardiac operations."
+ },
+ "trec|5|NCT03985774": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patient is symptomatic and has a history of stroke (minor or non-disabling), TIA and/or amaurosis fugax within 60 days of the procedure."
+  ],
+  "reason": "The patient's history of stroke occurred 10-15 years ago, failing the requirement for a stroke within 60 days of the procedure."
+ },
+ "trec|5|NCT03840265": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria and does not exhibit any of the exclusion criteria."
+ },
+ "trec|5|NCT02089217": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all inclusion criteria and has no exclusion criteria that apply to his known medical history."
+ },
+ "trec|5|NCT01236508": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Diagnosis of stroke or TIA made by a stroke specialist within 90 days and fulfilling the following criteria:"
+  ],
+  "reason": "The patient's prior stroke occurred 10-15 years ago, which fails the requirement of a stroke diagnosis within 90 days."
+ },
+ "trec|5|NCT02748941": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Homolateral stroke or TIA > 1 month"
+  ],
+  "reason": "The patient has a history of prior CVA that occurred 10-15 years ago, which violates the exclusion criterion for homolateral stroke or TIA greater than 1 month."
+ },
+ "trec|5|NCT00417963": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Extensive or diffuse atherosclerotic disease"
+  ],
+  "reason": "The patient has a history of CAD s/p CABG and moderate to severe PVD, which meets the exclusion criterion for extensive or diffuse atherosclerotic disease."
+ },
+ "trec|5|NCT03871725": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Carotid artery with 30% - 70% stenosis by ultrasound and plaque thickness>2.5mm"
+  ],
+  "reason": "The patient is excluded because angiography revealed an 80% stenosis of the right ICA and a 90% left ICA stenosis, which exceeds the maximum of 70% required by the inclusion criteria."
+ },
+ "trec|5|NCT00231231": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "To be entered into the study, the patient must have one or more of the following conditions: \n\n \u00b7 congestive heart failure (class III/IV) and/or known severe left ventricular dysfunction LVEF < 30% \n\n open heart surgery within six weeks \n\n recent MI (>24 hours and <4 weeks) \n\n unstable angina (CCS class III/IV) \n\n synchronous severe cardiac and carotid disease requiring open heart surgery and carotid revascularization \n\n severe pulmonary disease to include any of the following: \n\n chronic oxygen therapy \n\n resting PO2 of 60 mmHg \n\n baseline hematocrit 50% \n\n FEV1 or DLCO 50% of normal. \u00b7 contralateral carotid occlusion \u00b7 contralateral laryngeal palsy \u00b7 post-radiation treatment \u00b7 previous CEA recurrent stenosis \u00b7 high cervical ICA lesions \u00b7 CCA lesions below the clavicle \u00b7 severe tandem lesions \n\n abnormal stress test."
+  ],
+  "reason": "The patient does not meet any of the mandatory high-risk conditions required for asymptomatic patients with >80% stenosis."
+ },
+ "trec|5|NCT02334826": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Prior CABG"
+  ],
+  "reason": "The patient is excluded because they have a history of prior CABG, which is explicitly listed as an exclusion criterion."
+ },
+ "trec|5|NCT03364270": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients presenting a. to the neurologist for evaluation of stroke or TIA (Symptomatic) with: i. Symptomatic patients with plaque \u226570% in at least one carotid artery that would be implicated as the source of embolus responsible for the stroke/TIA. b. or to the vascular surgeon for CEA (Asymptomatic) with: i. asymptomatic patients with a luminal stenosis of \u226570% in at least one carotid artery (stable plaque) referred for CEA ii. age-matched by deciles to symptomatic patients"
+  ],
+  "reason": "The patient was referred to cardiology rather than to a neurologist for stroke or TIA evaluation or to a vascular surgeon for CEA."
+ },
+ "trec|5|NCT02341664": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets the trial's inclusion criteria including age, history of coronary artery disease, stroke, severe carotid stenosis, and peripheral vascular disease without meeting any exclusion criteria."
+ },
+ "trec|5|NCT03721523": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "All patients who have suffered a Partial Anterior Circulatory Stroke (PACS) or Transient Ischaemic Attack (TIA)."
+  ],
+  "reason": "The patient has a history of stroke without residual deficit and bilateral carotid artery stenosis, but the description does not indicate he suffered a Partial Anterior Circulatory Stroke (PACS) or Transient Ischaemic Attack (TIA)."
+ },
+ "trec|5|NCT00883402": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Carotid artery stenosis detectable by duplex ultrasound, with no ipsilateral carotid territory symptoms(or none for some months) and no previous procedure done on it, which might well need procedural treatment now with CEA or CAS."
+  ],
+  "reason": "The patient reports occasional dizziness and headaches, and has a history of a prior CVA, meaning he does not meet the requirement of having no ipsilateral carotid territory symptoms."
+ },
+ "trec|5|NCT00178672": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "The patient must be clinically symptomatic, i.e., within the previous 120 days have experienced in the ipsilateral carotid artery distribution, either 1) one or more TIAs, characterized by distinct focal neurologic dysfunction or monocular blindness with clearing of signs and symptoms within 24 hours, or 2) one or more completed strokes (as defined by this protocol) with persistence of symptoms or signs for more than 24 hours (the most recent event is used as the qualifying event). Except as excluded below, the patient must have documented stenosis > 60%, of the common or internal carotid artery. For an asymptomatic patient to be considered, the patient must have a > 70% diameter stenosis of the internal or common carotid artery without neurological symptoms."
+  ],
+  "reason": "The patient has bilateral carotid stenosis with greater than 70% diameter stenosis but has had no neurological symptoms within the previous 120 days, and his history of stroke was 10-15 years prior, failing the symptomatic timeframe requirement."
+ },
+ "trec|5|NCT01685567": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has bilateral carotid artery stenosis meeting the asymptomatic criteria without any exclusionary conditions mentioned in the medical history."
+ },
+ "trec|5|NCT02750644": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets the criteria for asymptomatic carotid stenosis greater than 60 percent by angiography and does not meet any of the exclusion criteria."
+ },
+ "trec|5|NCT02536378": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has significant carotid artery disease meeting the stenosis and age criteria, and no exclusion criteria apply."
+ },
+ "trec|5|NCT03333330": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "bearing an asymptomatic carotid stenosis of 30-70% in diameter, as established by Doppler-measured peak systolic flow velocity, according to the Society of Radiologists in Ultrasound Consensus Conference (Grant et al. Radiology 2003).",
+   "history of stroke or transitory ischemic attack,",
+   "Atrial fibrillation or previous cardiac surgery or positioning of intracrdiac devices (excluded coronary stents) as potential confounding causes of cerebral ischemic damage,"
+  ],
+  "reason": "The patient is excluded because he has a carotid stenosis greater than 70% (80% and 90%), a history of a prior CVA, a history of cardiac surgery (CABG), and symptomatic carotid disease with dizziness."
+ },
+ "trec|5|NCT00029146": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Vascular imaging demonstrating occlusion of one or both internal carotid arteries."
+  ],
+  "reason": "The patient has severe bilateral carotid stenosis (80% and 90%) rather than a complete carotid occlusion as required by the inclusion criteria."
+ },
+ "trec|6|NCT00350298": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient is over 18, has C. difficile-associated diarrhea with a positive test, is receiving standard of care treatment with vancomycin, and meets all inclusion criteria without violating any exclusion criteria."
+ },
+ "trec|6|NCT02053350": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Currently receiving other alternative treatment for CDI (e.g. antibiotics other than metronidazole or vancomycin; probiotics; immunoglobulin therapy; fecal transplant)"
+  ],
+  "reason": "The patient is excluded because she was encouraged to take probiotics upon discharge, which violates the exclusion criterion regarding currently receiving other alternative treatments for CDI such as probiotics."
+ },
+ "trec|6|NCT03030248": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients admitted to the hematology oncology inpatient units at Froedtert Memorial Lutheran Hospital",
+   "Diagnosis of C. difficile colitis [NAAT (+) and toxin EIA (+) within 3 months of enrollment]."
+  ],
+  "reason": "The patient is not admitted to a hematology oncology unit and has a recent history of C. difficile infection within 3 months, which violates the trial criteria."
+ },
+ "trec|6|NCT04138706": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "More than 2 episodes of C. difficile in the last 5 years."
+  ],
+  "reason": "The patient has a history of 2 prior C. diff infections plus the current infection, resulting in more than 2 episodes of C. difficile in the last 5 years, which violates the exclusion criteria."
+ },
+ "trec|6|NCT00177970": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria including age, positive C. difficile assay, recurrent severe infection, and required underlying medical conditions/score, with no applicable exclusion criteria."
+ },
+ "trec|6|NCT01868373": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a confirmed recurrent Clostridium difficile infection treated with oral vancomycin and has relapsed within 4 weeks, meeting all the inclusion criteria without any applicable exclusion criteria."
+ },
+ "trec|6|NCT01346059": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "need for probiotics"
+  ],
+  "reason": "The patient is excluded from the trial because she was encouraged and advised to take probiotics upon discharge, which violates the exclusion criterion regarding the need for probiotics."
+ },
+ "trec|6|NCT00304889": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "disease has been treated, and the symptoms failed to respond to treatment with metronidazole, or symptoms recurred after the patient has completed a course of metronidazole therapy",
+   "patients who are medically unstable, for example in an ICU and on medications to maintain blood pressure"
+  ],
+  "reason": "The patient does not have a history of metronidazole failure or recurrence after metronidazole therapy, and she was recently admitted to the ICU on vasopressors, which violates the exclusion criteria."
+ },
+ "trec|6|NCT01680874": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Adult of either gender, 18 years or older with a first episode of C. difficile infection",
+   "History of multiple C. difficile infection"
+  ],
+  "reason": "The patient has a history of multiple C. difficile infections rather than a first episode, which directly violates the inclusion and exclusion criteria."
+ },
+ "trec|6|NCT01226992": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "More than one episode of CDI that has been severe or rapid in onset, resulting in: \n\n intensive care unit admission"
+  ],
+  "reason": "The patient meets the exclusion criterion of having a severe episode of C. diff resulting in intensive care unit admission."
+ },
+ "trec|6|NCT03827447": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Having both C. difficile NAAT (+) and C. difficile toxin EIA (-)."
+  ],
+  "reason": "The patient tested positive on the C. diff assay, but the trial requires both NAAT (+) and toxin EIA (-) results, and the toxin status is not specified as negative."
+ },
+ "trec|6|NCT02237859": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Current diagnosis of CDI"
+  ],
+  "reason": "The patient has a current diagnosis of C. difficile infection on admission, which meets the exclusion criterion."
+ },
+ "trec|6|NCT02707198": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Undergoing dialysis and other renal treatment",
+   "An existing C. difficile infection",
+   "A recent history of C. difficile infection (within the last 3 months)",
+   "A recent history of antibiotic use (within the last 3 months)"
+  ],
+  "reason": "The patient is excluded because she is undergoing dialysis, has an active C. difficile infection, and has a recent history of both C. difficile infection and antibiotic use within the last 3 months."
+ },
+ "trec|6|NCT02466698": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Pre-existing bowel discontinuity (e.g. ileostomy)."
+  ],
+  "reason": "The patient is excluded because she has ESRD on peritoneal dialysis, which constitutes a pre-existing bowel discontinuity."
+ },
+ "trec|6|NCT03466502": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Requiring metronidazole during hospitalization"
+  ],
+  "reason": "The patient is excluded because she was treated with intravenous and oral Flagyl (metronidazole) during her hospitalization."
+ },
+ "trec|6|NCT02437500": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Admitted to or expected to be admitted to an intensive care unit."
+  ],
+  "reason": "The patient was admitted to the intensive care unit during her admission, which meets the exclusion criterion regarding ICU admission."
+ },
+ "trec|6|NCT02667418": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Receipt of more than a single course of oral vancomycin, fidaxomicin, or a vancomycin tapering regimen since the primary episode of CDI as defined above"
+  ],
+  "reason": "The patient has received multiple courses of oral vancomycin for recurrent C. diff infections, which violates the exclusion criterion regarding prior treatment courses."
+ },
+ "trec|6|NCT01703494": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Previous treatment with at least one course of tapered/pulse dose vancomycin as per SHEA-IDSA C difficile treatment guidelines or -Inability to taper or stop vancomycin without developing diarrhea requiring anti-infective therapy. -"
+  ],
+  "reason": "The patient is excluded because there is no documentation that she received a tapered or pulse dose of vancomycin or was unable to taper or stop vancomycin."
+ },
+ "trec|6|NCT02347280": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Meets criteria for operative management as below (Table 1)."
+  ],
+  "reason": "The patient does not meet the criteria for operative management as required by the trial, as there is no indication of an operative approach being agreed upon by the attending physician."
+ },
+ "trec|6|NCT02395848": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Actively taking Saccharomyces boulardii or other probiotics other than yogurt."
+  ],
+  "reason": "The patient is excluded because she was encouraged to take probiotics upon discharge, which violates the protocol restriction against actively taking probiotics."
+ },
+ "trec|7|NCT03363451": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has decompensated cirrhosis complicated by hepatic encephalopathy and esophageal varices, meeting the study criteria without any applicable exclusion criteria."
+ },
+ "trec|7|NCT00281502": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subject has used neomycin or other antibiotic within 2 weeks of enrollment or is actively using lactulose at time of enrollment."
+  ],
+  "reason": "The patient was started on lactulose during his recent admission, which meets the exclusion criterion regarding active lactulose use at the time of enrollment."
+ },
+ "trec|7|NCT04675775": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has cirrhosis and a presumptive diagnosis of hepatic encephalopathy, meets the diagnostic criteria through history of variceal bleeding and esophageal varices, and has no stated exclusion criteria."
+ },
+ "trec|7|NCT04229901": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The patient does not have acute-on-chronic liver failure (ACLF), which is the primary condition required for this trial."
+ },
+ "trec|7|NCT02517385": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Evidence of decompensated liver disease defined as any of the following: serum albumin <3.2 g/dL, total bilirubin >1.5 mg/dL, or prothrombin time/international normalized ratio >1.3 times normal at screening, or history or presence of ascites or encephalopathy, or bleeding from esophageal varices.",
+   "Advanced liver disease (eg, ascites, bleeding esophageal varices, hepatic encephalopathy, cancer or hepatic metastasis)."
+  ],
+  "reason": "The patient is excluded because he has a history of hepatic encephalopathy and bleeding esophageal varices, which are explicitly listed as exclusion criteria."
+ },
+ "trec|7|NCT04807023": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient is an adult with cirrhosis and has been hospitalized for acute on chronic liver failure due to hepatic encephalopathy and a recent digestive hemorrhage related to portal hypertension, meeting all required inclusion criteria without any stated exclusion criteria applying."
+ },
+ "trec|7|NCT03753438": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Other liver diseases such as chronic hepatitis B, chronic hepatitis C, Wilsons' disease, Hemochromatosis, glycogen storage diseases etc.",
+   "Compensated : CTP 6 & 7 without any evidence of decompensation in form of Hepatic encephalopathy, ascites, GI bleed or prolonged jaundice.",
+   "NASH (Non Alcoholic SteatoHepatitis) cirrhosis"
+  ],
+  "reason": "The patient has chronic hepatitis C instead of NASH cirrhosis, and meets multiple exclusion and unmet inclusion criteria including a history of GI bleed, hepatic encephalopathy, and chronic hepatitis C."
+ },
+ "trec|7|NCT02508298": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Any clinically-evident complication of cirrhosis that defines decompensation : jaundice, ascites, variceal hemorrhage, overt hepatic encephalopathy)"
+  ],
+  "reason": "The patient has a history of variceal hemorrhage (UGIB due to esophageal varices) and a presumptive diagnosis of hepatic encephalopathy, which meet the exclusion criteria for clinically-evident complications of decompensated cirrhosis."
+ },
+ "trec|7|NCT02439567": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Treatment with interferon."
+  ],
+  "reason": "The patient is excluded because he has a history of past treatment with interferon for his hepatitis C."
+ },
+ "trec|7|NCT04816916": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "History of cirrhosis and at least 1 prior episode of overt hepatic encephalopathy (OHE) prior to Screening."
+  ],
+  "reason": "The patient has a new presentation of suspected hepatic encephalopathy but does not have a documented history of prior overt hepatic encephalopathy."
+ },
+ "trec|7|NCT03155282": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Cirrhotic patients with a recent episode of gastrointestinal bleeding or infection that may affect the hemodynamic flow."
+  ],
+  "reason": "The patient is excluded because he has a history of a recent episode of upper gastrointestinal bleeding due to NSAID gastritis."
+ },
+ "trec|7|NCT01226797": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Prior liver biopsy showing cirrhosis.",
+   "Evidence of portal hypertension including splenomegaly, ascites, encephalopathy, and/or esophageal varices."
+  ],
+  "reason": "The patient is excluded because he has a history of cirrhosis and exhibits evidence of portal hypertension with esophageal varices and hepatic encephalopathy."
+ },
+ "trec|7|NCT01134692": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No history of upper GI bleeding in the past",
+   "history of gastrointestinal bleeding",
+   "hepatic encephalopathy"
+  ],
+  "reason": "The patient is excluded because he has a history of upper gastrointestinal bleeding and hepatic encephalopathy."
+ },
+ "trec|7|NCT00859053": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Positive for HCV, unless HCV RNA is undetectable"
+  ],
+  "reason": "The patient has Hepatitis C virus (HCV) infection, which meets the exclusion criterion for being positive for HCV."
+ },
+ "trec|7|NCT03493204": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Clinical diagnosis of cirrhosis with ascites."
+  ],
+  "reason": "The patient has a diagnosis of cirrhosis and esophageal varices, but the record does not document ascites, which is required by the inclusion criteria."
+ },
+ "trec|7|NCT03005444": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Successful TIPS",
+   "Use of Viatorr stent"
+  ],
+  "reason": "The patient is excluded because the trial requires a successful TIPS and use of Viatorr stent, neither of which are present in the patient's description."
+ },
+ "trec|7|NCT03641872": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has cirrhosis with acute complications including hepatic encephalopathy and gastrointestinal bleeding within the last month, meeting the study inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|7|NCT03987893": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients with ACLF with presence of hepatic encephalopathy > grade 2 as per WHC"
+  ],
+  "reason": "The patient does not meet the inclusion criterion requiring hepatic encephalopathy greater than grade 2, as he has a presumptive diagnosis of hepatic encephalopathy without a specified grade greater than 2."
+ },
+ "trec|7|NCT03547895": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "exposure to previous antiviral therapy"
+  ],
+  "reason": "The patient is excluded from the trial because he has previously failed interferon therapy twice, which violates the exclusion criterion regarding exposure to previous antiviral therapy."
+ },
+ "trec|7|NCT01059396": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No esophageal varices (or with small varices without red signs) in a recent videogastroscophy (<3 months before randomization).",
+   "previous decompensation of liver cirrhosis associated with portal hypertension."
+  ],
+  "reason": "The patient is excluded because he has grade II esophageal varices and a history of previous decompensation of liver cirrhosis associated with portal hypertension, specifically a recent admission for upper gastrointestinal bleeding."
+ },
+ "trec|8|NCT00071396": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients who have previously received Rituximab and CAMPATH-1H in combination are excluded."
+  ],
+  "reason": "The patient is excluded because the clinical trial text states that patients who have previously received Rituximab and CAMPATH-1H in combination are excluded, and the patient has received prior Campath therapy following previous regimens which included Rituximab (R-CVP)."
+ },
+ "trec|8|NCT00769522": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No aggressive B-cell cancer, such as Richter syndrome",
+   "No prior CLL specific-chemotherapy, radiotherapy, and/or immunotherapy"
+  ],
+  "reason": "The patient has Richter's transformation and has received prior CLL-specific chemotherapy, violating both the disease characteristics and prior therapy criteria."
+ },
+ "trec|8|NCT00381004": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Untreated CLL, CLL/PLL, or SLL (small lymphocytic lymphoma) with indication for therapy. Indications for therapy include at least one of the following: (1) one or more disease-related symptoms [fever, night sweats, weight loss > 10% in prior 6 months, pronounced fatigue]; (2) advanced stage disease (Rai stage >/= 3 or Binet stage C); (3) autoimmune anemia and/or thrombocytopenia that is unresponsive to other therapies; (4) massive or progressive hepatomegaly and/or splenomegaly and/or lymphadenopathy; (5) recurrent infections; (6) rapid lymphocyte doubling time of < 6 months.",
+   "Patients who have been treated with not more than one regimen of immunotherapy (e.g. rituximab, alemtuzumab, rituximab plus alemtuzumab) for a diagnosis of CLL, CLL/PLL, or SLL (small lymphocytic lymphoma)."
+  ],
+  "reason": "The patient has previously been treated with multiple lines of therapy (FCR, PCR, R-CVP, and Campath), which violates the frontline untreated status and the maximum of one prior immunotherapy regimen criteria."
+ },
+ "trec|8|NCT02553304": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has a confirmed diagnosis of chronic lymphocytic leukemia and meets all stated inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|8|NCT01446900": {
+  "verdict": "excluded",
+  "failed_criteria": [],
+  "reason": "The patient has Richter's transformation (large cell transformation) of CLL, which goes beyond the standard CLL/SLL scope required by the trial."
+ },
+ "trec|8|NCT00006669": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No prior rituximab"
+  ],
+  "reason": "The patient has previously received R-CVP and rituximab-containing regimens, which violates the prior therapy exclusion criterion of no prior rituximab."
+ },
+ "trec|8|NCT01576588": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Other oncological diseases requiring active treatment (except hormonal therapy)."
+  ],
+  "reason": "The patient has Richter's transformation, which represents a large cell transformation / other oncological disease requiring active treatment and thus meets the exclusion criterion."
+ },
+ "trec|8|NCT02337829": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Richter's transformation."
+  ],
+  "reason": "The patient is excluded because the trial explicitly lists Richter's transformation as an exclusion criterion and the patient's biopsy confirmed Richter's transformation."
+ },
+ "trec|8|NCT04072458": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients at high risk of Tumor Lysis Syndrome (TLS) \n\n a. Bulky disease i. A unidimensional lesion greater than 10 cm and/or b. Lymphocyte count greater than 25,000 per \u00b5L"
+  ],
+  "reason": "The patient has bulky lymphadenopathy, meeting the exclusion criterion for patients at high risk of Tumor Lysis Syndrome due to bulky disease."
+ },
+ "trec|8|NCT00182650": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Histologically confirmed follicular non-Hodgkin's lymphoma (NHL)",
+   "No current transformation of lymphoma (e.g., elements of intermediate- or high-grade lymphoma by biopsy)"
+  ],
+  "reason": "The patient has chronic lymphocytic leukemia with Richter's transformation rather than follicular non-Hodgkin's lymphoma, and the protocol explicitly excludes patients with current lymphoma transformation."
+ },
+ "trec|8|NCT00077194": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No transformed lymphoma"
+  ],
+  "reason": "The patient is excluded because the trial explicitly specifies no transformed lymphoma, and the patient has Richter's transformation (large cell transformation)."
+ },
+ "trec|8|NCT04607772": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "DLBCL transformed from Chronic Lymphocytic Leukemia (Richter Syndrome);"
+  ],
+  "reason": "The patient has large cell transformation from chronic lymphocytic leukemia, specifically diagnosed as Richter's transformation, which is an explicit exclusion criterion."
+ },
+ "trec|8|NCT00058240": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No other malignancy that would limit survival to less than 2 years"
+  ],
+  "reason": "The patient has Richter's transformation, which represents large cell transformation of CLL and serves as an exclusion criterion."
+ },
+ "trec|8|NCT01217749": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has Richter's transformation arising out of CLL, meets the prior therapy requirements, and has no applicable exclusion criteria."
+ },
+ "trec|8|NCT01142011": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for Waldenstroms Macroglobulinaemia, whereas the patient has chronic lymphocytic leukemia (CLL) with Richter's transformation."
+ },
+ "trec|8|NCT02232386": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No prior treatment.",
+   "Richter's syndrome (RS), concomitant or past malignancy. Subjects who have been free of malignancy for at least 5 years, or have a history of completely resected non-melanoma skin cancer, or successfully treated in situ carcinoma are eligible."
+  ],
+  "reason": "The patient is excluded because the trial requires no prior treatment and no history of Richter's syndrome, whereas the patient has received multiple prior lines of therapy and has developed Richter's transformation."
+ },
+ "trec|8|NCT04074330": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "For Phase 1 Dose Escalation: o. aNHL including mantle cell lymphoma and DLBCL histologies such as transformed DLBCL from low-grade lymphoma (follicular or others), DLBCL associated with small-cell infiltration in bone marrow, B-cell lymphoma with intermediate features between DLBCL and Burkitt's lymphoma or with intermediate features between DLBCL and Hodgkin lymphoma, FL grade 3B, and aggressive B-cell lymphoma unclassifiable who must have previously received rituximab, cyclophosphamide, doxorubicin (hydroxydaunorubicin), vincristine, (Oncovin) and prednisone (R-CHOP) (or equivalent anti-CD20 containing therapy) and 1 additional line of therapy in the r/r setting."
+  ],
+  "reason": "The patient has Richter's transformation from CLL, which does not meet the specified histology requirements for Phase 1 or Phase 2 under the inclusion criteria."
+ },
+ "trec|8|NCT00004218": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Previously untreated disease"
+  ],
+  "reason": "The patient has previously received multiple lines of therapy, failing the inclusion criterion for previously untreated disease."
+ },
+ "trec|8|NCT03744676": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient meets all the inclusion criteria for relapsed or refractory large cell transformed DLBCL, has an age over 18, excellent performance status, and has no applicable exclusion criteria."
+ },
+ "trec|8|NCT02135133": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subjects must not have received any prior systemic therapy for CLL and currently have an indication for treatment as defined by the IWCLL 2008 Guidelines",
+   "Participants who have had any prior systemic therapy for CLL, or chemotherapy or radiotherapy within 4 weeks (6 weeks for nitrosoureas or mitomycin C) for some other indication prior to entering the study or those who have not recovered from adverse events due to agents administered more than 4 weeks earlier."
+  ],
+  "reason": "The patient has already received prior systemic therapies for CLL (FCR, PCR, R-CVP, and Campath), which violates the criteria requiring participants to be previously untreated."
+ },
+ "trec|9|NCT02899611": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subject has history or evidence of congestive heart failure, clinically significant peripheral edema, or anemia with a hematocrit <30%."
+  ],
+  "reason": "The patient has a history of congestive heart failure, which meets an exclusion criterion for the study."
+ },
+ "trec|9|NCT00040326": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Absence of a history of serious cerebral insult after the age of 5; a progressive neurological disorder; mental retardation (I.Q. less than 70); psychogenic seizures; focal neurological deficits other than memory disturbances; unequivocal focal extratemporal EEG slowing or interictal spikes; or lesions on neuroimaging outside of the mesial temporal area."
+  ],
+  "reason": "The patient has a history of severe intellectual disability and anoxic brain injury at birth, which violates the inclusion criterion requiring the absence of mental retardation."
+ },
+ "trec|9|NCT02885207": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No evidence of injury (excluding temporal or hyperintensity of hippocampal sclerosis) on brain MRI with focus on regions of interest cuts.",
+   "Epilepsy that started within a period of two years preceding the study entry (including vegetative symptoms of temporal focal seizures).",
+   "Background Neurological: hyperthermic seizures in childhood, neonatal distress, history of seizures related to a circumstance, inflammation or infection of the CNS."
+  ],
+  "reason": "The patient is excluded because his epilepsy is likely due to an anoxic brain injury at birth, he has a structural brain MRI abnormality (left temporal atrophic changes), and his epilepsy started decades ago rather than within the preceding two years."
+ },
+ "trec|9|NCT01284556": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "participants having at least eight Type I partial onset seizures during 8-week baseline period;"
+  ],
+  "reason": "The patient does not meet the frequency requirement of having at least eight Type I partial onset seizures during an 8-week baseline period."
+ },
+ "trec|9|NCT00056576": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patient with newly diagnosed epilepsy who has complex partial seizures (with or without secondary generalization)",
+   "Patient must have received less than 2 weeks of prior AED therapy, which will be discontinued at study entry"
+  ],
+  "reason": "The patient does not have newly diagnosed epilepsy as he has a history of seizures since age 13 and has a long history of AED therapy."
+ },
+ "trec|9|NCT00175825": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subjects having at least 4 partial onset seizures during the 4-week Baseline Period and at least 2 partial onset seizures during the 3 months prior to Visit 1"
+  ],
+  "reason": "The patient does not have the required frequency of partial onset seizures documented in the criteria."
+ },
+ "trec|9|NCT03941613": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "I.Q. of greater than 70",
+   "A progressive neurological disorder; mental retardation (I.Q. less than 70)"
+  ],
+  "reason": "The patient is excluded because he has a history of severe intellectual disability, which conflicts with the IQ requirement of greater than 70 and falls under mental retardation exclusion criteria."
+ },
+ "trec|9|NCT01910129": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "11. Has known or suspected severe atherosclerotic cardiovascular disease, severe carotid artery disease (e.g. bruits or history of TIA or CVA), congestive heart failure (CHF), known severe coronary artery disease or recent myocardial infarction."
+  ],
+  "reason": "The patient is excluded because he has a history of congestive heart failure (CHF)."
+ },
+ "trec|9|NCT02126774": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Presence of moderate or greater developmental or cognitive delay prior to seizure onset (e.g., if an adolescent, not in self-contained classroom; if IQ is documented, should be > 70)"
+  ],
+  "reason": "The patient has a history of severe intellectual disability, which meets the exclusion criterion regarding moderate or greater developmental or cognitive delay."
+ },
+ "trec|9|NCT03531008": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Presence of moderate or greater developmental or cognitive delay (e.g., if an adolescent, not in self-contained classroom; if IQ is documented, should be \u2265 70)"
+  ],
+  "reason": "The patient has a history of severe intellectual disability, which meets the exclusion criterion regarding developmental or cognitive delay."
+ },
+ "trec|9|NCT04153175": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Per medical history, for the 3 months before informed consent an average of six or more disabling focal seizures of temporal lobe onset, with or without secondary generalization, per month."
+  ],
+  "reason": "The patient does not meet the frequency requirement of six or more disabling focal seizures per month, having gone 20 years without a seizure until a recent isolated event after tapering off Dilantin."
+ },
+ "trec|9|NCT03278210": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "important mental retardation"
+  ],
+  "reason": "The patient has a history of severe intellectual disability, which meets the exclusion criterion for important mental retardation."
+ },
+ "trec|9|NCT00175929": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Subjects having at least 4 partial onset seizures during the Baseline period and at least 2 partial onset seizures per month during the 3 months preceding Visit 1"
+  ],
+  "reason": "The patient has been seizure free for 20 years prior to a recent single episode and does not meet the frequency requirement for partial onset seizures."
+ },
+ "trec|9|NCT00439387": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients not capable of giving an informed consent."
+  ],
+  "reason": "The patient is excluded because he has severe intellectual disability and is not capable of giving informed consent."
+ },
+ "trec|9|NCT03590197": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patients who are already under treatment for the presenting conditions."
+  ],
+  "reason": "The patient is excluded because he has a history of an episode of seizure within 72 hours of presentation and was maintained on phenobarbital and Dilantin, failing the criterion requiring treatment-naive patients or those off treatment for at least 4 weeks."
+ },
+ "trec|9|NCT02170077": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "At least 4 seizures per month within the last 2 months prior to randomisation"
+  ],
+  "reason": "The patient does not meet the frequency requirement of at least 4 seizures per month within the last 2 months."
+ },
+ "trec|9|NCT01392768": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Presence of severe mental retardation of any etiology;"
+  ],
+  "reason": "The patient has a history of severe intellectual disability, which meets the exclusion criterion for severe mental retardation."
+ },
+ "trec|9|NCT01545518": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Normal brain magnetic resonance imaging (MRI) - 3 Tesla, seizure protocol; with the exception of hippocampal sclerosis"
+  ],
+  "reason": "The patient's MRI shows atrophic changes in the left temporal lobe, which fails the requirement for a normal brain MRI or hippocampal sclerosis only."
+ },
+ "trec|9|NCT03283371": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Must have a drug-resistant epilepsy defined as failure of adequate trials of 2 (or more) tolerated and appropriately chosen and used AEDs (whether as monotherapies or in combination) [Kwan 2010]."
+  ],
+  "reason": "The patient does not meet the requirement for drug-resistant epilepsy as he went 20 years seizure-free on medication rather than failing trials of two or more AEDs."
+ },
+ "trec|9|NCT03025906": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for patients with generalized convulsive status epilepticus admitted to a specific hospital, which does not match the patient's presentation."
+ },
+ "trec|10|NCT02808793": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Use during the 30 days before Screening (or 5 half lives, whichever is longer) or expected to require the use of omalizumab, immunosuppressive drugs, or systemic corticosteroids with a daily dose >10 mg prednisone or equivalent"
+  ],
+  "reason": "The patient is currently on a prednisone taper requiring doses greater than 10 mg per day, which violates the systemic corticosteroid exclusion criterion."
+ },
+ "trec|10|NCT00814073": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Change in the symptomatic treatment of mastocytosis or administration of any new treatment of mastocytosis within 4 weeks prior to baseline"
+  ],
+  "reason": "The patient was recently placed on a steroid taper which is new for her, violating the exclusion criterion regarding a change in symptomatic treatment within 4 weeks prior to baseline."
+ },
+ "trec|10|NCT04811365": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patient previously diagnosed with any of the following WHO systemic mastocytosis (SM) sub-classifications: mastocytosis in the skin, indolent SM, smoldering SM, SM with associated hematological neoplasm, aggressive SM, mast cell leukemia, mast cell sarcoma"
+  ],
+  "reason": "The patient is excluded because she has a prior diagnosis of systemic mastocytosis, which falls under the prohibited WHO sub-classifications."
+ },
+ "trec|10|NCT04333108": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patient with documented treatment failure of his/her symptom(s) (within the past 2 years) with at least two of the symptomatic treatments used at optimized dose: Anti H1, Anti H2, Proton pump inhibitor, Antidepressants, Cromoglycate Sodium, Antileukotriene."
+  ],
+  "reason": "The patient does not have documented treatment failure with at least two of the listed symptomatic treatments at optimized doses."
+ },
+ "trec|10|NCT01920204": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Serious mediator-related symptoms that cannot be controlled by H1 and H2 blocking drugs. Symptoms will be scored by an adapted MSAF (mastocytosis symptom assessment form) with at least: a pre-study score of 4 or more on 3 non-related items, or a pre-study score of 5 or more on 2 non-related items. one item from the scoring list can be replaced by flushes 7 or more per week or anaphylactic attacks 1 or more per week."
+  ],
+  "reason": "The patient does not meet the symptom severity and frequency criteria required by the trial, as her flares normally occur 3 times a year rather than the required frequency of flushes (7 or more per week) or the specified MSAF scores."
+ },
+ "trec|10|NCT00001760": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "No use of systemic corticosteroids within the past month."
+  ],
+  "reason": "The patient is currently on a steroid taper and was recently treated with IV steroids, violating the criterion excluding the use of systemic corticosteroids within the past month."
+ },
+ "trec|10|NCT03731260": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "4. For patients receiving corticosteroids, the dose must be \u2264 20 mg/d prednisone or equivalent, and the dose must be stable for \u2265 14 days."
+  ],
+  "reason": "The patient is receiving a new steroid taper which violates the requirement for a stable corticosteroid dose for at least 14 days."
+ },
+ "trec|10|NCT01481909": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Intake of oral corticosteroids within 14 days prior to the beginning of the study"
+  ],
+  "reason": "The patient was discharged on a prednisone taper and is currently taking oral corticosteroids, which violates the exclusion criterion regarding recent oral corticosteroid intake."
+ },
+ "trec|10|NCT04406376": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for Bell's Palsy, whereas the patient has systemic mastocytosis and no diagnosis of Bell's Palsy."
+ },
+ "trec|10|NCT02478957": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "History of systemic corticosteroid, immunosuppressive, or anti-IgE monoclonal antibody therapy (e.g., omalizumab) within 6 months of Screening"
+  ],
+  "reason": "The patient is currently on a steroid taper and was recently treated with IV steroids during her flares, violating the exclusion criterion regarding recent systemic corticosteroid therapy."
+ },
+ "trec|10|NCT00927212": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for atopic dermatitis, whereas the patient has systemic mastocytosis."
+ },
+ "trec|10|NCT00132015": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has histologically confirmed systemic mastocytosis with an elevated serum tryptase level and meets all stated inclusion and exclusion criteria."
+ },
+ "trec|10|NCT01128556": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Use of antihistamines, NSAIDS, steroids, or other drugs which may affect the skin-response"
+  ],
+  "reason": "The patient is excluded because she is currently using steroids and antihistamines (benadryl) which may affect the skin-response."
+ },
+ "trec|10|NCT00643071": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for ulcerative colitis, whereas the patient has systemic mastocytosis."
+ },
+ "trec|10|NCT00493129": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has systemic mastocytosis and meets all stated inclusion criteria without triggering any exclusion criteria."
+ },
+ "trec|10|NCT02441166": {
+  "verdict": "eligible",
+  "failed_criteria": [],
+  "reason": "The patient has systemic mastocytosis and no exclusion criteria apply since missing lab values and unspecified information such as informed consent are treated as met."
+ },
+ "trec|10|NCT03580655": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Patient must have a diagnosis of aggressive systemic mastocytosis (ASM), systemic mastocytosis with an associated hematologic neoplasm (SM-AHN) or mast cell leukemia (MCL) based on World Health Organization diagnostic criteria. Before enrollment, the Study Steering Committee must confirm the diagnosis of AdvSM (based on Central Pathology Laboratory assessment of bone marrow)."
+  ],
+  "reason": "The patient has systemic mastocytosis, but not one of the required advanced subtypes (aggressive systemic mastocytosis, systemic mastocytosis with an associated hematologic neoplasm, or mast cell leukemia) specified in the trial's inclusion criteria."
+ },
+ "trec|10|NCT04410809": {
+  "verdict": "excluded",
+  "failed_criteria": [
+   "Healthy as determined by screening assessments",
+   "Concomitant disease or condition that could interfere with, or for which the treatment might interfere with, the conduct of the study, or that would, in the opinion of the PI, pose an unacceptable risk to the subject in this study"
+  ],
+  "reason": "The patient has a 5-year history of systemic mastocytosis and is currently experiencing acute flares requiring steroid tapers, which conflicts with the requirement of being healthy and having no condition that poses an unacceptable risk or interferes with the study."
+ },
+ "trec|10|NCT02601703": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for atopic dermatitis, whereas the patient has systemic mastocytosis and no mention of atopic dermatitis."
+ },
+ "trec|10|NCT01303380": {
+  "verdict": "not_relevant",
+  "failed_criteria": [],
+  "reason": "The trial is for Hyper-IgD Syndrome, whereas the patient has systemic mastocytosis."
+ }
+}
