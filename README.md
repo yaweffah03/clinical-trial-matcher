@@ -91,7 +91,7 @@ The results below use a snapshot of **886 trials** fetched on 11 November 2026. 
 
 ## Evaluation
 
-No expert labels are saying which diabetes trials are truly right for each test patient. The evaluation has five parts, each answering a different question. The first three use the diabetes trials. The fourth runs the same method on a public benchmark that does have expert labels. The fifth measures the criteria check on both.
+There are no expert labels saying which diabetes trials are truly right for each test patient. The evaluation has five parts, each answering a different question. The first three use the diabetes trials. The fourth runs the same method on a public benchmark that does have expert labels. The fifth measures the criteria check on both.
 
 1. **Behaviour by age and sex.** How do the results change when only the patient's age or sex changes?
 2. **Known-item test.** Can the text search find a trial when the right answer is known?
@@ -253,7 +253,7 @@ The matcher never reads the criteria, which is why a quarter of its TREC top 10 
 The model does not give the verdict. For each trial it answers:
 
 - Is the trial about a condition the patient has?
-- For every inclusion criterion, and for each exclusion criterion, the patient has: what is the criterion about, does the description show the patient has it (yes, no or not stated), and which exact words show it?
+- For every inclusion criterion, and for each exclusion criterion that the patient has: what is the criterion about, does the description show the patient has it (yes, no or not stated), and which exact words show it?
 
 Code then decides, with fixed rules:
 
