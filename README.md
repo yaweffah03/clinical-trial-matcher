@@ -2,6 +2,8 @@
 
 Matches a patient summary to recruiting type 2 diabetes trials from ClinicalTrials.gov using sentence embeddings and Chroma, then checks the top trials' eligibility criteria with a language model (Google Gemini). Inspired by NIH's TrialGPT. Learning project, not a clinical tool.
 
+**Try it:** [clinical-trial-matcher-demo.streamlit.app](https://clinical-trial-matcher-demo.streamlit.app). The page may take a minute to wake up if nobody has used it recently.
+
 > **Not a clinical tool.** This is a learning project. Its eligibility check is often wrong, and it must not be used to make care decisions.
 
 ## What it does
