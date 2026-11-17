@@ -6,8 +6,11 @@ __pycache__/
 .DS_Store
 ~$*
 
-# Downloaded data (recreate it with: python src/fetch_trials.py)
-data/
+# Downloaded data (recreate it with: python src/fetch_trials.py).
+# The diabetes trials are kept, so the hosted web page uses the same
+# snapshot as the results in the README.
+data/*
+!data/trials.json
 
 # Vector database (recreate it with: python src/build_index.py)
 chroma_db/

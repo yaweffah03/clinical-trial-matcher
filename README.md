@@ -30,6 +30,7 @@ python src/match.py --age 62 --sex FEMALE "Type 2 diabetes for 10 years, on metf
 | 5 | `src/fetch_trec.py`, `src/check_trec.py`, `src/fetch_trec_ages.py`, `src/build_trec_index.py`, `src/evaluate_trec.py` | Runs the same matching method on the TREC 2021 Clinical Trials benchmark and scores it against expert labels. |
 | 6 | `src/check_criteria.py` | Asks a language model about each eligibility criterion of the top trials, then decides the verdict with fixed rules in code. |
 | 6b | `src/evaluate_criteria.py` | Measures the criteria check against the suitability labels and the TREC expert labels. |
+| 7 | `src/app.py` | A web page where anyone can describe a patient, see the closest trials and, optionally, the criteria check for each. |
 
 The age and sex filter is a hard rule: a trial outside the patient's age range or sex is removed. The matcher's ranking is by text similarity only. The criteria check in Step 6 is a separate, optional step that reads the criteria.
 
@@ -70,6 +71,16 @@ python src/evaluate_criteria.py
 ```
 
 The model's answers used for the results below are saved in `results/criterion_checks_gemini-3.5-flash-lite.json`, so `evaluate_criteria.py` reproduces them without sending any requests. The first design's verdicts are kept in `results/criteria_verdicts_gemini-3.5-flash-lite.json` as a record; the code that produced them was replaced by the final design.
+
+### Web page
+
+```
+streamlit run src/app.py
+```
+
+This opens a page in the browser. Type a patient description, an age and a sex, and it shows the 5 closest trials with links to ClinicalTrials.gov. If `GEMINI_API_KEY` is set, it also shows the criteria check's verdict for each trial, with every criterion the model checked and the words it pointed to. Without a key, the check is switched off and the search still works.
+
+To share it, the page can be hosted for free on [Streamlit Community Cloud](https://streamlit.io/cloud) from this repository, with `src/app.py` as the main file and the key added under the app's **Secrets** as `GEMINI_API_KEY = "..."`. The trial database is built from `data/trials.json` the first time the page starts. Every visitor's checks use the same free key, so a busy day can use up its daily limit; the page then says the AI did not answer and the search keeps working.
 
 ## Data
 
