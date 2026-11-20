@@ -1,10 +1,10 @@
 # clinical-trial-matcher
 
-Matches a patient summary to recruiting type 2 diabetes trials from ClinicalTrials.gov using sentence embeddings and Chroma, then checks the top trials' eligibility criteria with a language model (Google Gemini). Inspired by NIH's TrialGPT. Learning project, not a clinical tool.
+Matches a patient summary to recruiting type 2 diabetes trials from ClinicalTrials.gov using sentence embeddings and Chroma, then checks the top trials' eligibility criteria with a language model (Google Gemini). Inspired by NIH's TrialGPT. I built it as a learning project; it is not a clinical tool.
 
 **Try it:** [clinical-trial-matcher-demo.streamlit.app](https://clinical-trial-matcher-demo.streamlit.app). The page may take a minute to wake up if nobody has used it recently.
 
-> **Not a clinical tool.** This is a learning project. Its eligibility check is often wrong, and it must not be used to make care decisions.
+> **Not a clinical tool.** I built this to learn. Its eligibility check is often wrong, and it must not be used to make care decisions.
 
 ## What it does
 
@@ -169,7 +169,7 @@ These figures change slightly from run to run, because Chroma's search is approx
 
 ### 3. Suitability labels
 
-For each of the 10 test patients, the top 5 trials (50 patient–trial pairs) were labelled 1 (suitable) or 0 (not suitable), using three checks in order:
+For each of the 10 test patients, each of the top 5 trials (50 patient–trial pairs) gets a label of 1 (suitable) or 0 (not suitable), using three checks in order:
 
 1. Is the trial about a problem the patient has?
 2. Do the main inclusion criteria fit what the summary says?
@@ -177,14 +177,14 @@ For each of the 10 test patients, the top 5 trials (50 patient–trial pairs) we
 
 A condition or past procedure the trial requires counts as absent if the summary does not mention it. Lab values, measurements and demographics that the summary does not mention are not held against the patient.
 
-The pairs were labelled twice:
+Each pair was labelled twice:
 
 - **AI labels:** an AI assistant (Claude) read each trial's eligibility criteria and gave a label and a one-line reason.
-- **Human labels:** the project author labelled all 50 from the trial pages on ClinicalTrials.gov.
+- **My labels:** I labelled all 50 myself from the trial pages on ClinicalTrials.gov.
 
-Neither labeller is a clinician. The labels and reasons are in `results/review.csv`.
+I am not a clinician, and neither is the AI. The labels and reasons are in `results/review.csv`.
 
-**Agreement.** The two sets of labels agreed on 48 of 50 pairs on the first pass. The author rechecked the two disputed pairs against the trial pages and corrected both, so the final labels agree on all 50. In both cases the trial's topic fitted the patient, but one inclusion criterion ruled the patient out.
+**Agreement.** The two sets of labels agreed on 48 of 50 pairs on the first pass. I rechecked the two disputed pairs against the trial pages and corrected my labels on both, so the final labels agree on all 50. In both cases the trial's topic fitted the patient, but one inclusion criterion ruled the patient out.
 
 Precision at 5 is the share of top-5 trials labelled suitable.
 
@@ -210,7 +210,7 @@ Precision at 5 is the share of top-5 trials labelled suitable.
 
 The TREC 2021 Clinical Trials track is a public test set: 75 patient descriptions and 35,832 patient–trial pairs labelled by expert assessors as eligible (2), excluded (1) or not relevant (0). It covers all conditions, not only diabetes.
 
-The same method is used as for the diabetes trials: the same model, the same trial text (title, conditions and eligibility criteria), the same cosine ranking and the same age and sex filter. Three things had to be added:
+The same method is used as for the diabetes trials: the same model, the same trial text (title, conditions and eligibility criteria), the same cosine ranking and the same age and sex filter. I had to add three things:
 
 - **Patient age and sex** are pulled from the free-text description with two patterns (for example, "45-year-old man", "32 yo woman", "74M"). This worked for all 75 patients.
 - **Trial age limits and sex** are not in the benchmark's trial file, so they are fetched from the ClinicalTrials.gov API as it is today.
@@ -239,7 +239,7 @@ A trial that was not judged for a patient counts as 0.
 - **The age and sex filter helps.** It raises the share of eligible trials in the top 10 from 31% to 36% and lowers the share of excluded trials from 31% to 26%.
 - **Similarity is not eligibility, measured.** Even with the filter, about a quarter of the top 10 are trials on the right topic that experts say the patient is excluded from.
 - **The oldest patients again get the most excluded trials.** For patients aged 65 and over, 45% of the top 10 are excluded and 27% eligible. This matches the suitability labels above, but rests on only 8 patients.
-- **The filter makes some mistakes.** It removed 75 of the 5,569 trials that experts labelled eligible (1.3%). The cause was not investigated. Possible reasons are registry age limits that changed after 2021, or assessors being lenient about age.
+- **The filter makes some mistakes.** It removed 75 of the 5,569 trials that experts labelled eligible (1.3%). I did not investigate the cause. Possible reasons are registry age limits that changed after 2021, or assessors being lenient about age.
 
 #### What this does not show
 
@@ -248,7 +248,7 @@ A trial that was not judged for a patient counts as 0.
 
 ### 5. Criteria check
 
-The matcher never reads the criteria, which is why a quarter of its TREC top 10 are trials the patient is excluded from. Step 6 adds a check that does, using `gemini-3.5-flash-lite` on Google's free tier. The larger free Gemini models did not answer within two minutes on a free key, so the smallest one was used.
+The matcher never reads the criteria, which is why a quarter of its TREC top 10 are trials the patient is excluded from. Step 6 adds a check that does, using `gemini-3.5-flash-lite` on Google's free tier. The larger free Gemini models did not answer within two minutes on a free key, so I used the smallest one.
 
 #### How it works
 
@@ -270,19 +270,19 @@ For TREC, the matcher's top 20 trials per patient are checked and re-ordered: tr
 
 #### Keeping the test fair
 
-The data was split before any changes were made:
+I split the data before making any changes:
 
-- **Tuning:** TREC patients 11 to 30 (400 patient–trial pairs). The instructions and rules were changed by looking only at these results.
-- **Test:** the 50 labelled diabetes pairs and TREC patients 1 to 10 (250 pairs), scored once, after the method was fixed. The ranking by failed criteria was chosen on the tuning patients before the test results were seen.
+- **Tuning:** TREC patients 11 to 30 (400 patient–trial pairs). I changed the instructions and rules by looking only at these results.
+- **Test:** the 50 labelled diabetes pairs and TREC patients 1 to 10 (250 pairs), scored once, after I had fixed the method. I chose the ranking by failed criteria on the tuning patients, before seeing the test results.
 
 The design went through two versions:
 
 - **First design:** the model gave the verdict itself. It rejected more than half of the suitable trials, because it treated missing details as failures.
-- **Final design:** the per-criterion answers and code-decided verdict described above. A first version of its rules also failed any inclusion criterion about a condition, treatment or procedure that the description never mentioned. On the tuning patients that rule rejected 86 of 113 expert-eligible trials and made the ranking worse, so it was removed.
+- **Final design:** the per-criterion answers and code-decided verdict described above. A first version of its rules also failed any inclusion criterion about a condition, treatment or procedure that the description never mentioned. On the tuning patients that rule rejected 86 of 113 expert-eligible trials and made the ranking worse, so I removed it.
 
 #### Results on the test data
 
-**Diabetes pairs (the author's suitability labels):**
+**Diabetes pairs (my suitability labels):**
 
 | | First design | Final design |
 |---|---|---|
@@ -309,16 +309,16 @@ The final design caught 61 of 74 expert-excluded trials and wrongly rejected 20 
 - **The model's quotes are not always exact.** 83 answers on the test data quoted evidence that was not in the description, and were treated as not stated.
 - **The share of excluded trials in the top 10 rises with the main ranking** (28% to 37%), though it stays below the matcher's 40%. Pushing unrelated trials down lets more trials on the right topic move up, including some the patient is excluded from.
 
-These failures were found on the test data, so the method was not changed to fix them. Doing so would turn the test into tuning data.
+I found these failures on the test data, so I did not change the method to fix them. Doing so would turn the test into tuning data.
 
 ## Limitations
 
 - **Similarity is not eligibility.** The matcher ranks trials by how similar their text is to the patient summary. A trial that excludes kidney disease can rank highly for a patient with kidney disease, because both texts are about kidney disease. The matcher itself checks only age and sex; the criteria check in Step 6 is a separate, imperfect step.
 - **Small, free language model.** The criteria check uses the smallest free Gemini model. It misreads some criteria and does not always follow its instructions. Its answers are not repeatable exactly: asking again can give a different answer, which is why the answers used for the results are saved.
-- **Not comparable with TrialGPT's accuracy.** TrialGPT reports accuracy per criterion, against criterion-level expert annotations. This project measures whole-trial verdicts, which are harder: one misread criterion makes the verdict wrong. No criterion-level labels were made here.
+- **Not comparable with TrialGPT's accuracy.** TrialGPT reports accuracy per criterion, against criterion-level expert annotations. I measure whole-trial verdicts, which are harder: one misread criterion makes the verdict wrong. I did not make criterion-level labels.
 - **Patient data is sent to Google.** The criteria check sends the patient description to Google's API (with storage turned off). The descriptions here are invented or from a public benchmark. Real patient data should never be sent this way.
 - **Most trial text is cut off.** The embedding model reads at most 256 tokens. 509 of the 886 trial texts (57%) are longer, so later criteria, usually the exclusion criteria, are ignored.
-- **No expert labels for the diabetes trials.** Expert labels are used only in the TREC benchmark, which covers other patients and trials. The suitability labels come from an AI assistant and the project author, not from clinicians. The author's labels were recorded in the same file as the AI labels, so the labelling cannot be shown to be blind. Patient summaries are one sentence long, so many criteria could not be checked.
+- **No expert labels for the diabetes trials.** Expert labels are used only in the TREC benchmark, which covers other patients and trials. The suitability labels come from an AI assistant and from me, not from clinicians. I recorded my labels in the same file as the AI labels, so I cannot show that my labelling was blind. Patient summaries are one sentence long, so many criteria could not be checked.
 - **Small test set.** There are only 10 invented patients and 50 labelled pairs. Group figures rest on as few as 15 pairs, and each pair moves the criteria check's agreement by 2 percentage points. They show tendencies, not statistically tested differences.
 - **Age limits in free text are missed.** The filter uses the registry's age fields. A limit that appears only in the criteria text is not applied.
 - **Broad condition search.** The API search returns any trial that lists type 2 diabetes among its conditions, including trials aimed at prevention or at people at risk.
@@ -330,7 +330,7 @@ These failures were found on the test data, so the method was not changed to fix
 
 ## How this differs from TrialGPT
 
-TrialGPT uses large language models in three stages: retrieving candidate trials, judging the patient against each eligibility criterion, and ranking trials from those judgements. It was evaluated on expert-annotated patient–trial pairs. This project does simpler versions of all three: retrieval with a small embedding model instead of a language model, criterion judgements with a small free model instead of GPT-4, and ranking by counting failed criteria instead of a learned score. Unlike TrialGPT, the model here never gives the verdict itself; fixed rules in code do.
+TrialGPT uses large language models in three stages: retrieving candidate trials, judging the patient against each eligibility criterion, and ranking trials from those judgements. It was evaluated on expert-annotated patient–trial pairs. My project does simpler versions of all three: retrieval with a small embedding model instead of a language model, criterion judgements with a small free model instead of GPT-4, and ranking by counting failed criteria instead of a learned score. Unlike TrialGPT, the model here never gives the verdict itself; fixed rules in code do.
 
 ## Credits
 
